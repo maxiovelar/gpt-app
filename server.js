@@ -171,8 +171,13 @@ const getCompletion = async (prompt) => {
       ],
       temperature: 0.7,
     });
-    console.log(chatCompletion.data.choices[0].message.content);
-    return chatCompletion.data.choices[0].message.content;
+
+    const content = chatCompletion.data.choices[0].message.content;
+    const usage = chatCompletion.data.usage;
+    return {
+      content: content,
+      usage: usage,
+    };
   } catch (error) {
     if (error.response) {
       console.log(error.response.status);
@@ -187,7 +192,7 @@ const getCompletion = async (prompt) => {
 
 // API Routes
 app.get("/api/prompt", (req, res) => {
-  res.json({ message: "Bienvenido a GPT-APP" });
+  res.json({ message: "Welcome to GPT-APP" });
 });
 
 app.post("/api/prompt", async (req, res) => {
