@@ -2,31 +2,36 @@
 
 import axios from "axios";
 import Link from "next/link";
-import { useState } from "react";
-import { Spinner } from "./_components/Spinner";
+import { useState, useRef, FormEvent } from "react";
+import Spinner from "./_components/Spinner";
 
 const Home = () => {
-  const [prompt, setPrompt] = useState("");
   const [result, setResult] = useState("");
   const [usage, setUsage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      const { data } = await axios.post("/api/response", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        prompt: prompt,
-      });
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
-      setResult(data.content);
-      setIsLoading(false);
-      setUsage(data.usage);
-      console.log("USAGE:", usage);
-    } catch (error) {
-      console.log("Error:", error);
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setResult("");
+    const prompt = inputRef.current?.value.trim();
+    if (prompt) {
+      setIsLoading(true);
+      try {
+        const { data } = await axios.post("/api/response", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          prompt: prompt,
+        });
+        setIsLoading(false);
+        setResult(data.content);
+        setUsage(data.usage);
+        console.log("USAGE:", usage);
+      } catch (error) {
+        console.log("Error:", error);
+      }
     }
   };
 
@@ -47,29 +52,25 @@ const Home = () => {
         </div>
 
         <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleSubmit;
-          }}
+          onSubmit={handleSubmit}
           className="flex flex-col space-y-4 w-full"
         >
           <label className="text-xl">Feel free to ask away!</label>
           <input
+            ref={inputRef}
             className="border border-black rounded-lg px-5 py-2 outline-none"
             type="text"
-            onChange={(e) => {
-              setPrompt(e.target.value);
-            }}
+            required
           />
           <button
             className="px-6 py-2 font-medium bg-[#1ad197] text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
             type="submit"
           >
-            {isLoading ? <Spinner size={4} /> : "Submit"}
+            {isLoading ? <Spinner /> : "Submit"}
           </button>
-          {result && (
+          {result && inputRef.current && inputRef.current.value.length > 0 && (
             <div className="bg-gray-100 p-10 mt-10 text-black rounded">
-              <p className="font-bold text-lg">{prompt}</p>
+              <p className="font-bold text-lg">{inputRef.current.value}</p>
               <p>{result}</p>
             </div>
           )}
