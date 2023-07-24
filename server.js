@@ -167,6 +167,11 @@ const getCompletion = async (prompt) => {
             products
           )}).  `,
         },
+        {
+          role: "user",
+          content: "How much stock is there for the Elegance Blouse?",
+        },
+        { role: "assistant", content: `There is 100 stock for that item ` },
         { role: "user", content: prompt },
       ],
       temperature: 0.7,
