@@ -6,13 +6,13 @@ import { useState } from "react";
 import { Spinner } from "./_components/Spinner";
 
 const Home = () => {
-  const [prompt, setPrompt] = useState();
-  const [result, setResult] = useState();
+  const [prompt, setPrompt] = useState("");
+  const [result, setResult] = useState("");
+  const [usage, setUsage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // OpenAI API Request
-  const handleSubmit = async (prompt) => {
-    setIsLoading(true);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     try {
       const { data } = await axios.post("/api/response", {
         headers: {
@@ -23,6 +23,8 @@ const Home = () => {
 
       setResult(data.content);
       setIsLoading(false);
+      setUsage(data.usage);
+      console.log("USAGE:", usage);
     } catch (error) {
       console.log("Error:", error);
     }
@@ -47,7 +49,7 @@ const Home = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            handleSubmit(prompt);
+            handleSubmit;
           }}
           className="flex flex-col space-y-4 w-full"
         >

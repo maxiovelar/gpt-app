@@ -11,14 +11,11 @@ if (!configuration.apiKey)
 
 const openai = new OpenAIApi(configuration);
 
-export async function POST(req) {
-  // const { prompt } = await req.body;
+export async function POST(req: Request) {
   const { prompt } = await req.json();
 
   if (!prompt || prompt.length === 0) {
-    return NextResponse.error(new Error("You must provide a prompt"), {
-      status: 400,
-    });
+    return NextResponse.error();
   }
 
   try {
@@ -41,14 +38,16 @@ export async function POST(req) {
       temperature: 0.7,
     });
 
-    const content = chatCompletion.data.choices[0].message.content;
+    const content = chatCompletion.data.choices[0]?.message?.content;
     const usage = chatCompletion.data.usage;
+    console.log(chatCompletion);
+    console.log(chatCompletion.data.choices[0]);
 
     return NextResponse.json({
       content: content,
       usage: usage,
     });
-  } catch (error) {
+  } catch (error: any) {
     if (error.response) {
       console.log(error.response.status);
       console.log(error.response.data);
