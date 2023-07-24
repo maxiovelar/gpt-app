@@ -4,11 +4,12 @@ import axios from "axios";
 import { useState } from "react";
 
 const Home = () => {
-  const [prompt, setPrompt] = useState();
-  const [result, setResult] = useState();
+  const [prompt, setPrompt] = useState("");
+  const [result, setResult] = useState("");
+  const [usage, setUsage] = useState(null);
 
-  // OpenAI API Request
-  const handleSubmit = async (prompt) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     try {
       const { data } = await axios.post("/api/response", {
         headers: {
@@ -18,26 +19,25 @@ const Home = () => {
       });
 
       setResult(data.content);
+      setUsage(data.usage);
+      console.log("USAGE:", usage);
     } catch (error) {
       console.log("Error:", error);
     }
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPrompt(e.target.value);
+  };
+
   return (
     <div className="p-10">
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleSubmit(prompt);
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <label htmlFor="">Ask shopping assistant</label>
         <input
           className="border border-black"
           type="text"
-          onChange={(e) => {
-            setPrompt(e.target.value);
-          }}
+          onChange={handleChange}
         />
         <button type="submit">Submit</button>
       </form>
