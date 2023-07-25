@@ -1,69 +1,66 @@
 "use client";
 
+import React, { useState, useRef, FormEvent } from "react";
 import axios from "axios";
 import Link from "next/link";
-import { useState, useRef, FormEvent, MouseEventHandler } from "react";
 import Spinner from "./_components/Spinner";
 import { UpdateIcon } from "./_components/icons/UpdateIcon";
 import { ChatCompletionRequestMessage } from "openai";
 import cx from "classnames";
 
 const Home = () => {
-  // const [answers, setAnswers] = useState<string[]>([]);
   const [query, setQuery] = useState("");
   const [chatMessages, setChatMessages] = useState<
     ChatCompletionRequestMessage[]
   >([]);
   const [isLoading, setIsLoading] = useState(false);
-  // const inputRef = useRef<HTMLInputElement | null>(null);
 
   const handleError = (err: string) => {
     setIsLoading(false);
-    // setAnswers([]);
     console.error(err);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // const query = inputRef.current?.value.trim();
-    if (query) {
+    const inputQuery = query.trim();
+    if (inputQuery) {
       setIsLoading(true);
-      const messages = [
-        ...chatMessages,
-        { role: "user", content: query } as ChatCompletionRequestMessage,
-      ];
-      setChatMessages(messages);
-      setQuery("");
+      const newMessage: ChatCompletionRequestMessage = {
+        role: "user",
+        content: inputQuery,
+      };
+      setChatMessages((prevMessages) => [...prevMessages, newMessage]);
 
       try {
         const { data } = await axios.post("/api/response", {
           headers: {
             "Content-Type": "application/json",
           },
-          requestMessages: messages,
+          requestMessages: [...chatMessages, newMessage],
         });
         if (data?.error) {
           handleError(data.error);
           return;
         }
         setChatMessages((prev) => [...prev, data.message]);
-        // setAnswers([...answers, data.message.content]);
         setIsLoading(false);
+        setQuery("");
       } catch (error) {
-        console.log("Error:", error);
+        console.error("Error:", error);
       }
     }
   };
 
   const handleClear = () => {
     setChatMessages([]);
-    // setAnswers([]);
   };
+
+  const finalMessages = [...chatMessages].reverse();
 
   return (
     <>
       <div className="flex space-x-5">
-        <div className="flex flex-col justify-between border-r border-[#1ad197] pr-5 w-96">
+        <div className="flex flex-col border-r border-[#1ad197] pr-5 w-96">
           <h3 className="text-3xl mb-5 text-[#1ad197] font-bold flex flex-col">
             <span>Welcome to the</span>
             <span>SquareOne AI Assistant</span>
@@ -108,40 +105,22 @@ const Home = () => {
               Clear chat
             </button>
           </div>
-          {isLoading && (
-            <p className="animate-pulse duration-75">
-              SquareOne assistant is loading...
-            </p>
-          )}
-          {chatMessages.length > 0 ? (
-            <div className="flex flex-col justify-center align-center gap-5 pt-10">
-              <div className="bg-gray-100 p-10 text-black rounded fade-down">
-                {chatMessages.reverse().map((message, index) => (
-                  <div key={`response-${index}`}>
-                    {/* {message.role === "assistant" && (
-                      <div className="flex flex-col mb-4 fade-down">
-                        <p className="text-right font-medium text-md opacity-50 fade-down">
-                          SquareOne Assistant
-                        </p>
-                        <div className="flex-1 bg-[#1ad197] text-white p-3 rounded-lg mb-4 relative fade-down">
-                          <div>{message.content}</div>
-                          <div className="absolute right-0 top-1/2 transform translate-x-1/2 rotate-45 w-2 h-2 bg-[#1ad197]"></div>
-                        </div>
-                      </div>
-                    )}
-                    {message.role === "user" && (
-                      <div className="flex flex-col mb-4 fade-down">
-                        <p className="font-medium text-md opacity-50 fade-down">
-                          User
-                        </p>
-                        <div className="flex-1 bg-gray-200 text-black p-3 rounded-lg mb-6 relative">
-                          <div>{message.content}</div>
-                          <div className="absolute left-0 top-1/2 transform -translate-x-1/2 rotate-45 w-2 h-2 bg-gray-200"></div>
-                        </div>
-                      </div>
-                    )} */}
 
-                    <div className="flex flex-col mb-4 fade-down">
+          <p
+            className={cx(
+              isLoading ? "visible" : "invisible",
+              "animate-pulse duration-75"
+            )}
+          >
+            SquareOne assistant is thinking...
+          </p>
+
+          {finalMessages.length > 0 && (
+            <div className="flex flex-col justify-center align-center gap-5 mt-5">
+              <div className="border border-gray-200 bg-gray-100 p-8 text-black rounded fade-down">
+                {finalMessages.map((message, index) => (
+                  <div key={`response-${index}`}>
+                    <div className="flex flex-col fade-down">
                       <p
                         className={cx(
                           "font-medium text-md opacity-50 fade-down",
@@ -156,7 +135,7 @@ const Home = () => {
                       </p>
                       <div
                         className={cx(
-                          `flex-1 p-3 rounded-lg mb-6 relative`,
+                          `flex-1 p-3 rounded-lg mb-5 relative`,
                           { "bg-gray-200 text-black": message.role === "user" },
                           {
                             "bg-[#1ad197] text-white":
@@ -171,8 +150,6 @@ const Home = () => {
                             {
                               "left-0 -translate-x-1/2 bg-gray-200":
                                 message.role === "user",
-                            },
-                            {
                               "right-0 translate-x-1/2 bg-[#1ad197]":
                                 message.role === "assistant",
                             }
@@ -184,7 +161,7 @@ const Home = () => {
                 ))}
               </div>
             </div>
-          ) : null}
+          )}
         </form>
       </div>
     </>
