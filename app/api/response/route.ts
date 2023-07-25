@@ -12,15 +12,14 @@ if (!configuration.apiKey)
 const openai = new OpenAIApi(configuration);
 
 export async function POST(req: Request) {
-  const { prompt } = await req.json();
-  console.log("PROMPT: ", prompt);
+  const { requestMessages } = await req.json();
 
   const system_message = `You are a shopping assistant with access to the store (${JSON.stringify(
     products
   )}).Create a valid JSON object following this format:\n[{\"text\": \"Your response as an assistant\", \"products\": \"An array of products ids that match the customers queries.\"}]\n\nExample:\n[{\"text\": \"Sure! Here are some dresses that you might like: 1. Chic Linen Dress - Available in Beige and Dusty Rose. 2. Fancy Cocktail Dress - Available in Emerald Green and Ruby Red. 3. Flowy Boho Maxi Skirt - Available in Olive Green and Rust Orange. Let me know if you would like more information or if you have any specific preferences!", \"products\": [\"001\", \"002\"]}]\n\n
 `;
 
-  if (!prompt || prompt.length === 0) {
+  if (!requestMessages || requestMessages.length === 0) {
     return NextResponse.error();
   }
 
@@ -40,18 +39,16 @@ export async function POST(req: Request) {
           role: "assistant",
           content: `Yes, we have the following shirts to recommend for you`,
         },
-        { role: "user", content: prompt },
+        ...requestMessages,
       ],
-      temperature: 0.7,
+      temperature: 0.6,
     });
 
-    const content = chatCompletion.data.choices[0]?.message?.content;
+    const message = chatCompletion.data.choices[0]?.message;
     const usage = chatCompletion.data.usage;
 
-    console.log("CONTENT: ", content);
-
     return NextResponse.json({
-      content: content,
+      message: message,
       usage: usage,
     });
   } catch (error: any) {
