@@ -120,6 +120,11 @@ const Home = () => {
                 ))}
             </div> */}
           </div>
+          {isLoading && (
+            <p className="animate-pulse duration-75">
+              SquareOne assistant is loading...
+            </p>
+          )}
           {responseList.length > 0 &&
           inputRef.current &&
           inputRef.current.value.length > 0 ? (
@@ -129,11 +134,25 @@ const Home = () => {
                   key={`response-${index}`}
                   className="bg-gray-100 p-10 text-black rounded fade-down"
                 >
-                  <p className="font-bold text-lg">
-                    {inputRef?.current?.value}
-                    {/* {prompt} */}
+                  {/* <p className="font-bold text-lg">
+                    {inputRef?.current?.value} */}
+                  {/* {prompt} */}
+                  {/* </p> */}
+                  <div className="flex flex-col mb-4">
+                    <p className="font-mediumtext-md opacity-50">User</p>
+                    <div className="flex-1 bg-gray-200 text-black p-3 rounded-lg mb-2 relative">
+                      <div>{inputRef?.current?.value}</div>
+                      <div className="absolute left-0 top-1/2 transform -translate-x-1/2 rotate-45 w-2 h-2 bg-gray-200"></div>
+                    </div>
+                  </div>
+                  {/* <p>{response}</p> */}
+                  <p className="text-right font-medium text-md opacity-50">
+                    SquareOne Assistant
                   </p>
-                  <p>{response}</p>
+                  <div className="flex-1 bg-[#1ad197] text-white p-3 rounded-lg mb-2 relative">
+                    <div>{response}</div>
+                    <div className="absolute right-0 top-1/2 transform translate-x-1/2 rotate-45 w-2 h-2 bg-[#1ad197]"></div>
+                  </div>
                 </div>
               ))}
             </div>
