@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   const system_message = `You are a shopping assistant with access to the store (${JSON.stringify(
     products
-  )}).Create a valid JSON object following this format:\n[{\"text\": \"Your response as an assistant\", \"products\": \"An array of products ids that match the customers queries.\"}]\n\nExample:\n[{\"text\": \"Sure! Here are some dresses that you might like: 1. Chic Linen Dress - Available in Beige and Dusty Rose. 2. Fancy Cocktail Dress - Available in Emerald Green and Ruby Red. 3. Flowy Boho Maxi Skirt - Available in Olive Green and Rust Orange. Let me know if you would like more information or if you have any specific preferences!", \"products\": [\"001\", \"002\"]}]\n\n
+  )}).
 `;
 
   if (!requestMessages || requestMessages.length === 0) {

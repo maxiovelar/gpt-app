@@ -118,47 +118,56 @@ const Home = () => {
           {finalMessages.length > 0 && (
             <div className="flex flex-col justify-center align-center gap-5 mt-5">
               <div className="border border-gray-200 bg-gray-100 p-8 text-black rounded fade-down">
-                {finalMessages.map((message, index) => (
-                  <div key={`response-${index}`}>
-                    <div className="flex flex-col fade-down">
-                      <p
-                        className={cx(
-                          "font-medium text-md opacity-50 fade-down",
-                          {
-                            "text-right": message.role === "assistant",
-                          }
-                        )}
-                      >
-                        {message.role === "user"
-                          ? "User"
-                          : "SquareOne Assistant"}
-                      </p>
-                      <div
-                        className={cx(
-                          `flex-1 p-3 rounded-lg mb-5 relative`,
-                          { "bg-gray-200 text-black": message.role === "user" },
-                          {
-                            "bg-[#1ad197] text-white":
-                              message.role === "assistant",
-                          }
-                        )}
-                      >
-                        <div>{message.content}</div>
+                {finalMessages.map((message, index) => {
+                  const key = `response-${index}`;
+
+                  return (
+                    <div key={key}>
+                      <div className="flex flex-col fade-down">
+                        <p
+                          className={cx(
+                            message.role === "assistant" && "text-right",
+                            "font-medium text-md opacity-50 fade-down"
+                          )}
+                        >
+                          {message.role === "user"
+                            ? "User"
+                            : "SquareOne Assistant"}
+                        </p>
                         <div
                           className={cx(
-                            "absolute top-1/2 transform  rotate-45 w-2 h-2 ",
+                            `flex-1 p-3 rounded-lg mb-5 relative`,
                             {
-                              "left-0 -translate-x-1/2 bg-gray-200":
-                                message.role === "user",
-                              "right-0 translate-x-1/2 bg-[#1ad197]":
+                              "bg-gray-200 text-black": message.role === "user",
+                            },
+                            {
+                              "bg-[#1ad197] text-white":
                                 message.role === "assistant",
                             }
                           )}
-                        ></div>
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                message.content?.replace(/\n/g, "<br>") ?? "",
+                            }}
+                          />
+                          <div
+                            className={cx(
+                              "absolute top-1/2 transform  rotate-45 w-2 h-2 ",
+                              {
+                                "left-0 -translate-x-1/2 bg-gray-200":
+                                  message.role === "user",
+                                "right-0 translate-x-1/2 bg-[#1ad197]":
+                                  message.role === "assistant",
+                              }
+                            )}
+                          ></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
