@@ -19,6 +19,18 @@ export async function POST(req: Request) {
   )}).
 `;
 
+  const moderationResponse = await openai.createModeration({
+    input: requestMessages[requestMessages.length - 1].content,
+  });
+  if (moderationResponse.data.results[0]?.flagged) {
+    console.log("RESULTS: ", moderationResponse.data.results[0]);
+    console.log("Message is inappropriate");
+    return NextResponse.json({
+      message:
+        "Message is inappropriate, I'm not able to assist with that request.",
+    });
+  }
+
   if (!requestMessages || requestMessages.length === 0) {
     return NextResponse.error();
   }
