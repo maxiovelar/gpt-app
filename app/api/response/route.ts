@@ -41,12 +41,10 @@ export const POST = async (req: Request) => {
     input: query,
   });
 
-  console.log("message: ", response);
-
   return NextResponse.json({ response });
 };
 
 export const DELETE = async (req: Request) => {
-  memory.clear();
+  await memory.clear();
   return NextResponse.json({ message: "Memory cleared" });
 };
