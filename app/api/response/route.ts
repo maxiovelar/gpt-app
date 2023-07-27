@@ -1,76 +1,52 @@
-import { Configuration, OpenAIApi } from "openai";
 import { NextResponse } from "next/server";
 import { products } from "@/_data/products";
 
-const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+import { ChatOpenAI } from "langchain/chat_models/openai";
+import {
+  ChatPromptTemplate,
+  HumanMessagePromptTemplate,
+  SystemMessagePromptTemplate,
+  MessagesPlaceholder,
+} from "langchain/prompts";
+import { ConversationChain } from "langchain/chains";
+import { BufferMemory } from "langchain/memory";
+
+// CREATE CONTEXT
+const chat = new ChatOpenAI({ temperature: 0 });
+
+const systemTemplate = `The following is a friendly conversation between a human and an AI. The AI is a helpful shopping assistant with access to the following store. The AI is talkative and provides lots of specific details from its context. If the product that the customer is asking for does not exist into te store, the AI truthfully says it does not exist or it run out of stock and it will recommend to the customer a similar product from the store`;
+const humanTemplate = "{input}";
+
+const chatPrompt = ChatPromptTemplate.fromPromptMessages([
+  SystemMessagePromptTemplate.fromTemplate(systemTemplate),
+  new MessagesPlaceholder("history"),
+  HumanMessagePromptTemplate.fromTemplate(humanTemplate),
+]);
+
+const memory = new BufferMemory({
+  returnMessages: true,
+  memoryKey: "history",
 });
 
-if (!configuration.apiKey)
-  throw new Error("No OPENAI_API_KEY environment variable found");
+const chain = new ConversationChain({
+  memory,
+  prompt: chatPrompt,
+  llm: chat,
+  // verbose: true,
+});
 
-const openai = new OpenAIApi(configuration);
-
-export async function POST(req: Request) {
-  const { requestMessages } = await req.json();
-
-  const system_message = `You are a shopping assistant with access to the store (${JSON.stringify(
-    products
-  )}).
-`;
-
-  const moderationResponse = await openai.createModeration({
-    input: requestMessages[requestMessages.length - 1].content,
+export const POST = async (req: Request) => {
+  const { query } = await req.json();
+  const { response } = await chain.call({
+    input: query,
   });
-  if (moderationResponse.data.results[0]?.flagged) {
-    console.log("RESULTS: ", moderationResponse.data.results[0]);
-    console.log("Message is inappropriate");
-    return NextResponse.json({
-      message:
-        "Message is inappropriate, I'm not able to assist with that request.",
-    });
-  }
 
-  if (!requestMessages || requestMessages.length === 0) {
-    return NextResponse.error();
-  }
+  console.log("message: ", response);
 
-  try {
-    const chatCompletion = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "system",
-          content: system_message,
-        },
-        {
-          role: "user",
-          content: "Do you have any shirt for men?",
-        },
-        {
-          role: "assistant",
-          content: `Yes, we have the following shirts to recommend for you`,
-        },
-        ...requestMessages,
-      ],
-      temperature: 0.6,
-    });
+  return NextResponse.json({ response });
+};
 
-    const message = chatCompletion.data.choices[0]?.message;
-    const usage = chatCompletion.data.usage;
-
-    return NextResponse.json({
-      message: message,
-      usage: usage,
-    });
-  } catch (error: any) {
-    if (error.response) {
-      console.log(error.response.status);
-      console.log(error.response.data);
-      return error.response.status;
-    } else {
-      console.log(error.message);
-      return error.message;
-    }
-  }
-}
+export const DELETE = async (req: Request) => {
+  memory.clear();
+  return NextResponse.json({ message: "Memory cleared" });
+};

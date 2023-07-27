@@ -36,13 +36,16 @@ const Home = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          requestMessages: [...chatMessages, newMessage],
+          query,
         });
         if (data?.error) {
           handleError(data.error);
           return;
         }
-        setChatMessages((prev) => [...prev, data.message]);
+        setChatMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: data.response },
+        ]);
         setIsLoading(false);
         setQuery("");
       } catch (error) {
@@ -51,8 +54,9 @@ const Home = () => {
     }
   };
 
-  const handleClear = () => {
+  const handleClear = async () => {
     setChatMessages([]);
+    await axios.delete("/api/response");
   };
 
   const finalMessages = [...chatMessages].reverse();
