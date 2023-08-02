@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, FormEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Spinner from "./_components/Spinner";
