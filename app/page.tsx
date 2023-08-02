@@ -14,6 +14,7 @@ const Home = () => {
     ChatCompletionRequestMessage[]
   >([]);
   const [isLoading, setIsLoading] = useState(false);
+  let products = [];
 
   const handleError = (err: string) => {
     setIsLoading(false);
@@ -32,17 +33,24 @@ const Home = () => {
       setChatMessages((prevMessages) => [...prevMessages, newMessage]);
 
       try {
-        const { data } = await axios.post("/api/response", {
+        const { data } = await axios.post("/api/query", {
           headers: {
             "Content-Type": "application/json",
           },
-          requestMessages: [...chatMessages, newMessage],
+          // requestMessages: [...chatMessages, newMessage],
+          query: inputQuery,
         });
         if (data?.error) {
           handleError(data.error);
           return;
         }
-        setChatMessages((prev) => [...prev, data.message]);
+        console.log(data);
+        const response = data.result.text;
+        products = data.result.products;
+        setChatMessages((prev) => [
+          ...prev,
+          { role: "assistant", content: response },
+        ]);
         setIsLoading(false);
         setQuery("");
       } catch (error) {
