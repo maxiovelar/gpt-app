@@ -8,13 +8,26 @@ import { UpdateIcon } from "./_components/icons/UpdateIcon";
 import { ChatCompletionRequestMessage } from "openai";
 import cx from "classnames";
 
+interface Product {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  stock: number;
+  description: string;
+  slug: string;
+}
+
+interface MessagesProps {
+  role: "user" | "assistant";
+  content: string;
+  products?: Product[];
+}
+
 const Home = () => {
   const [query, setQuery] = useState("");
-  const [chatMessages, setChatMessages] = useState<
-    ChatCompletionRequestMessage[]
-  >([]);
+  const [chatMessages, setChatMessages] = useState<MessagesProps[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  let products = [];
 
   const handleError = (err: string) => {
     setIsLoading(false);
@@ -26,7 +39,7 @@ const Home = () => {
     const inputQuery = query.trim();
     if (inputQuery) {
       setIsLoading(true);
-      const newMessage: ChatCompletionRequestMessage = {
+      const newMessage: MessagesProps = {
         role: "user",
         content: inputQuery,
       };
@@ -46,10 +59,10 @@ const Home = () => {
         }
         console.log(data);
         const response = data.result.text;
-        products = data.result.products;
+        const products = data.result.products;
         setChatMessages((prev) => [
           ...prev,
-          { role: "assistant", content: response },
+          { role: "assistant", content: response, products: products },
         ]);
         setIsLoading(false);
         setQuery("");
@@ -64,6 +77,7 @@ const Home = () => {
   };
 
   const finalMessages = [...chatMessages].reverse();
+  console.log("FINAL MESSAGES: ", finalMessages);
 
   return (
     <>
@@ -160,6 +174,32 @@ const Home = () => {
                                 message.content?.replace(/\n/g, "<br>") ?? "",
                             }}
                           />
+                          {message.products && message.products?.length > 0 && (
+                            <div className="flex flex-col gap-3 mt-3">
+                              {message.products.map((product) => {
+                                return (
+                                  <Link
+                                    href={`${process.env.NEXT_PUBLIC_SO_URL}/products/${product.slug}`}
+                                    target="_blank"
+                                    title={`View ${product.name} on SquareOne`}
+                                    rel="noopener noreferrer"
+                                    key={product.id}
+                                    className="flex flex-col border border-[#16be89] rounded-lg py-2 px-4 text-sm hover:bg-[#16be89] hover:cursor-pointer"
+                                  >
+                                    <div className="flex items-center gap-2">
+                                      <p className="font-medium">
+                                        {product.name}
+                                      </p>
+                                      <p className="">
+                                        - {product.currency} {product.price}
+                                      </p>
+                                    </div>
+                                    <p className="">{product.description}</p>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          )}
                           <div
                             className={cx(
                               "absolute top-1/2 transform  rotate-45 w-2 h-2 ",
