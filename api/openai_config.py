@@ -40,16 +40,18 @@ if response.status_code == 200:
 
     # Loop through each item in the array and extract the desired information
     for item in json_data["results"]:
-        extracted_data = {
-            "id": item.get("id", None),
-            "name": item.get("name", None),
-            "description": item.get("description", None),
-            "price": item.get("price", None),
-            "currency": item.get("currency", None),
-            "slug": item.get("slug", None),
-            "stock": item.get("stock_level", None),
-        }
-        extracted_data_list.append(extracted_data)    
+         if item.get("active"):
+            extracted_data = {
+                "id": item.get("id", None),
+                "name": item.get("name", None),
+                "active": item.get("active", None),
+                "description": item.get("description", None),
+                "price": item.get("price", None),
+                "currency": item.get("currency", None),
+                "slug": item.get("slug", None),
+                "stock": item.get("stock_level", None),
+            }
+            extracted_data_list.append(extracted_data)    
     
     open('data.json', 'w').write(json.dumps( extracted_data_list, indent=4))
     open('dataSwell.json', 'w').write(json.dumps( json_data, indent=4))
@@ -95,6 +97,8 @@ def query(query):
     #Return a conversational answer about the question in a 'text' key.
     #Return an array with products un a 'products' key.
     #Don't return duplicated products.
+    #Don't show products that don't exist in the database.
+    
 
     #Context: {context}
     #Question: {question}
