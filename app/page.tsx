@@ -205,7 +205,7 @@ const Home = () => {
                                           <span className="font-bold">
                                             SALE
                                           </span>{" "}
-                                          {product.currency} {product.price}
+                                          {product.currency} {product.salePrice}
                                         </p>
                                       )}
                                     </div>
