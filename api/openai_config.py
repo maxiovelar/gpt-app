@@ -1,4 +1,5 @@
 import os
+import shutil
 import time
 import json
 import requests
@@ -47,7 +48,7 @@ if response.status_code == 200:
                 "active": item.get("active", None),
                 "description": item.get("description", None),
                 "sale": item.get("sale", None),
-                "salePrice": item.get("salePrice", None),
+                "sale_price": item.get("sale_price", None),
                 "price": item.get("price", None),
                 "currency": item.get("currency", None),
                 "slug": item.get("slug", None),
@@ -101,7 +102,7 @@ def query(query):
 
     #Return a conversational answer about the question in a 'text' key.
     #Return an array with products in a 'products' key just if you found products for the user question.
-    #Each product should have a 'id', 'name', 'description', 'price', 'sale', 'salePrice', 'currency', 'slug', 'active' and 'stock' keys.
+    #Each product should have a 'id', 'name', 'description', 'price', 'sale', 'sale_price', 'currency', 'slug', 'active' and 'stock' keys.
     #Don't return duplicated products.
     #Don't return non active products.
     #Don't show products that don't exist in the database.

@@ -12,7 +12,7 @@ interface Product {
   name: string;
   price: number;
   sale: boolean;
-  salePrice: number;
+  sale_price: number;
   currency: string;
   stock: number;
   description: string;
@@ -187,12 +187,21 @@ const Home = () => {
                                     title={`View ${product.name} on SquareOne`}
                                     rel="noopener noreferrer"
                                     key={product.id}
-                                    className="flex flex-col border border-[#16be89] rounded-lg py-2 px-4 text-sm hover:bg-[#16be89] hover:cursor-pointer"
+                                    className="flex flex-col border border-[#16be89] rounded-lg py-2 px-4 hover:bg-[#16be89] hover:cursor-pointer"
                                   >
                                     <div className="flex items-center gap-2">
-                                      <p className="font-medium uppercase">
+                                      <p className="font-medium">
                                         {product.name} -
                                       </p>
+                                      {product.sale && (
+                                        <p className="bg-[#16be89] rounded py-0.5 px-2 border border-[#1ad197]">
+                                          <span className="font-bold">
+                                            SALE
+                                          </span>{" "}
+                                          {product.currency}{" "}
+                                          {product.sale_price}
+                                        </p>
+                                      )}
                                       <p
                                         className={cx({
                                           "line-through": product.sale,
@@ -200,16 +209,8 @@ const Home = () => {
                                       >
                                         {product.currency} {product.price}
                                       </p>
-                                      {product.sale && (
-                                        <p>
-                                          <span className="font-bold">
-                                            SALE
-                                          </span>{" "}
-                                          {product.currency} {product.salePrice}
-                                        </p>
-                                      )}
                                     </div>
-                                    <p className="text-gray-100">
+                                    <p className="text-gray-100 text-sm">
                                       {product.description}
                                     </p>
                                   </Link>
