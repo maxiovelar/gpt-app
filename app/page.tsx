@@ -5,13 +5,14 @@ import axios from "axios";
 import Link from "next/link";
 import Spinner from "./_components/Spinner";
 import { UpdateIcon } from "./_components/icons/UpdateIcon";
-import { ChatCompletionRequestMessage } from "openai";
 import cx from "classnames";
 
 interface Product {
   id: string;
   name: string;
   price: number;
+  sale: boolean;
+  salePrice: number;
   currency: string;
   stock: number;
   description: string;
@@ -37,6 +38,7 @@ const Home = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setQuery("");
     const inputQuery = query.trim();
     if (inputQuery) {
       setIsLoading(true);
@@ -66,7 +68,6 @@ const Home = () => {
           { role: "assistant", content: response, products: products },
         ]);
         setIsLoading(false);
-        setQuery("");
       } catch (error) {
         console.error("Error:", error);
       }
@@ -78,7 +79,6 @@ const Home = () => {
   };
 
   const finalMessages = [...chatMessages].reverse();
-  console.log("FINAL MESSAGES: ", finalMessages);
 
   return (
     <>
@@ -116,14 +116,15 @@ const Home = () => {
             <button
               className="px-6 py-2 font-medium bg-[#1ad197] text-white w-fit transition-all shadow-[3px_3px_0px_black] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] disabled:pointer-events-none"
               type="submit"
-              disabled={isLoading ? true : false}
+              disabled={isLoading}
             >
               {isLoading ? <Spinner /> : "Submit"}
             </button>
             <button
               onClick={handleClear}
               type="button"
-              className="flex items-center gap-2 p-2 font-medium text-[#1ad197] w-fit transition-all hover:translate-x-[3px] hover:translate-y-[3px]"
+              disabled={isLoading}
+              className="flex items-center gap-2 p-2 font-medium text-[#1ad197] w-fit transition-all hover:translate-x-[3px] hover:translate-y-[3px] disabled:pointer-events-none disabled:opacity-60"
             >
               <UpdateIcon />
               Clear chat
@@ -189,14 +190,28 @@ const Home = () => {
                                     className="flex flex-col border border-[#16be89] rounded-lg py-2 px-4 text-sm hover:bg-[#16be89] hover:cursor-pointer"
                                   >
                                     <div className="flex items-center gap-2">
-                                      <p className="font-medium">
-                                        {product.name}
+                                      <p className="font-medium uppercase">
+                                        {product.name} -
                                       </p>
-                                      <p className="">
-                                        - {product.currency} {product.price}
+                                      <p
+                                        className={cx({
+                                          "line-through": product.sale,
+                                        })}
+                                      >
+                                        {product.currency} {product.price}
                                       </p>
+                                      {product.sale && (
+                                        <p>
+                                          <span className="font-bold">
+                                            SALE
+                                          </span>{" "}
+                                          {product.currency} {product.price}
+                                        </p>
+                                      )}
                                     </div>
-                                    <p className="">{product.description}</p>
+                                    <p className="text-gray-100">
+                                      {product.description}
+                                    </p>
                                   </Link>
                                 );
                               })}

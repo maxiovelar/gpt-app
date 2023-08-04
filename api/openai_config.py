@@ -46,6 +46,8 @@ if response.status_code == 200:
                 "name": item.get("name", None),
                 "active": item.get("active", None),
                 "description": item.get("description", None),
+                "sale": item.get("sale", None),
+                "salePrice": item.get("salePrice", None),
                 "price": item.get("price", None),
                 "currency": item.get("currency", None),
                 "slug": item.get("slug", None),
@@ -71,6 +73,9 @@ def get_chroma_instance():
 # Read documents from JSON file and add them to Chroma instance
 ################################################################################
 def revalidate():
+    if os.path.exists(DATABASE_PATH):
+        shutil.rmtree(DATABASE_PATH)
+        
     instance = get_chroma_instance()
     loader = JSONLoader(
         file_path='./data.json',
@@ -80,7 +85,7 @@ def revalidate():
 
     if loader:
         documents = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100, separators= ["\n\n", "\n", ".", ";", ",", " ", ""]) # se puede pasar regex a los separators
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100, separators= ["\n\n", "\n", "(?<=\. )", ";", ",", " ", ""]) # se puede pasar regex a los separators
         texts = text_splitter.split_documents(documents)
         instance.add_documents(texts)
 
@@ -95,8 +100,10 @@ def query(query):
     #You are a shopping assistant. Use the following pieces of context to answer the question at the end. Take your time to think and analyze your answer. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 
     #Return a conversational answer about the question in a 'text' key.
-    #Return an array with products un a 'products' key.
+    #Return an array with products in a 'products' key just if you found products for the user question.
+    #Each product should have a 'id', 'name', 'description', 'price', 'sale', 'salePrice', 'currency', 'slug', 'active' and 'stock' keys.
     #Don't return duplicated products.
+    #Don't return non active products.
     #Don't show products that don't exist in the database.
     
 
