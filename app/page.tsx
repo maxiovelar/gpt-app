@@ -61,7 +61,7 @@ const Home = () => {
           handleError(data.error);
           return;
         }
-        console.log(data);
+        // console.log(data);
         const response = data.result.text;
         const products = data.result.products;
         setChatMessages((prev) => [

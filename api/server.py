@@ -2,8 +2,8 @@ import time
 
 from fastapi import FastAPI, Request
 from openai_config import revalidate
-from openai_qa import query
-from openai_chat import chat_query
+from openai_qa import query_qa
+from openai_chat_v2 import query_chat
 from fastapi.middleware.cors import CORSMiddleware
 # from openai_chat import chat_history
 
@@ -77,7 +77,7 @@ async def handle_query(request: Request):
     data = await request.json()
     search = data["query"]
 
-    result = query(search)
+    result = query_qa(search)
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -88,16 +88,14 @@ async def handle_query(request: Request):
         "duration": f"{elapsed_time:.4f} seconds"
     }
     
-
-@app.post("/api/chat/query")
-async def handle_chat_query(request: Request):
+@app.post("/api/qa/query")
+async def qa_handle_query(request: Request):
     start_time = time.time()
-    revalidate()
 
     data = await request.json()
     search = data["query"]
 
-    result = chat_query(search)
+    result = query_qa(search)
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -107,13 +105,21 @@ async def handle_chat_query(request: Request):
         "result": result,
         "duration": f"{elapsed_time:.4f} seconds"
     }
+    
+@app.post("/api/chat/query")
+async def chatbot_handle_query(request: Request):
+    start_time = time.time()
 
-@app.delete("/api/chat/query")
-async def handle_chat_history_delete():
-    # memory.clear()
-    # chat_history.clear()
+    data = await request.json()
+    query = data["query"]
+
+    result = query_chat(query)
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+
     return {
         "status": "ok",
-        "message": "Chat history cleared"
+        "result": result,
+        "duration": f"{elapsed_time:.4f} seconds"
     }
-
