@@ -11,6 +11,7 @@ const nextConfig = {
       },
     ];
   },
+  images: { domains: ["cdn.swell.store", "cdn.schema.io"] },
 };
 
 module.exports = nextConfig;
