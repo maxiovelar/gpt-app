@@ -6,6 +6,7 @@ import Link from "next/link";
 import Spinner from "./_components/Spinner";
 import { UpdateIcon } from "./_components/icons/UpdateIcon";
 import cx from "classnames";
+import { LoadingText } from "./_components/LoadingText";
 
 interface Product {
   id: string;
@@ -49,7 +50,7 @@ const Home = () => {
       setChatMessages((prevMessages) => [...prevMessages, newMessage]);
 
       try {
-        const { data } = await axios.post("/api/query", {
+        const { data } = await axios.post("/api/chat/query", {
           headers: {
             "Content-Type": "application/json",
           },
@@ -74,8 +75,10 @@ const Home = () => {
     }
   };
 
-  const handleClear = () => {
+  const handleClear = async () => {
     setChatMessages([]);
+    // const response = await axios.delete("/api/chat/query");
+    // console.log(response);
   };
 
   const finalMessages = [...chatMessages].reverse();
@@ -131,14 +134,7 @@ const Home = () => {
             </button>
           </div>
 
-          <p
-            className={cx(
-              isLoading ? "visible" : "invisible",
-              "animate-pulse duration-75"
-            )}
-          >
-            SquareOne assistant is thinking...
-          </p>
+          {isLoading && <LoadingText isLoading={isLoading} />}
 
           {finalMessages.length > 0 && (
             <div className="flex flex-col justify-center align-center gap-5 mt-5">
