@@ -1,21 +1,31 @@
+import json
 import os
+
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 import json
 from langchain.chat_models import ChatOpenAI
-from langchain.chains import RetrievalQA, LLMChain
+from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
-from openai_config import revalidate, get_chroma_instance
-from langchain.memory import ConversationBufferMemory
+from openai_config import get_chroma_instance
+from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
+
+
+from langchain.memory import ConversationBufferMemory
+
+memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=True
+)
+
 
 ################################################################################
 # Make OpenAI chat query
 ################################################################################
-
-def chat_query(chat_query):
+def query_chat(query):
     instance = get_chroma_instance()
-    system_template = """
+    prompt_template = """
     #You are a shopping assistant. Use the following pieces of context to answer the question at the end. Take your time to think and analyze your answer. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 
     #Return a conversational answer about the question in a 'text' key.
@@ -29,23 +39,21 @@ def chat_query(chat_query):
     #Context: {context}
     #Question: {question}
     #Answer in JSON format:"""
+
+    PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
+
+    llm = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0,openai_api_key=os.getenv('OPENAI_API_KEY')) 
+    retriever=instance.as_retriever()
     
-
-    PROMPT = PromptTemplate(template=system_template, input_variables=["context", "question"])
-
-    chain_type_kwargs = {"prompt": PROMPT}  
-
-    question = chat_query
-    qa = RetrievalQA.from_chain_type(
-        llm=ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0,openai_api_key=os.getenv('OPENAI_API_KEY')),
-        chain_type="stuff",
-        retriever=instance.as_retriever(),
-        chain_type_kwargs=chain_type_kwargs
+    qa = ConversationalRetrievalChain.from_llm(
+        llm,
+        retriever=retriever,
+        combine_docs_chain_kwargs={"prompt": PROMPT},
+        memory=memory
     )
-
-    res = qa({"query": question})
     
+    print(memory.buffer)
 
-    return json.loads(res['result'])
+    res = qa.run(query)
 
-
+    return json.loads(res)

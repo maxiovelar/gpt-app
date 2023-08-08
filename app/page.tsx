@@ -77,8 +77,7 @@ const Home = () => {
 
   const handleClear = async () => {
     setChatMessages([]);
-    // const response = await axios.delete("/api/chat/query");
-    // console.log(response);
+    await axios.delete("/api/chat/query");
   };
 
   const finalMessages = [...chatMessages].reverse();

@@ -3,10 +3,8 @@ import time
 from fastapi import FastAPI, Request
 from openai_config import revalidate
 from openai_qa import query_qa
-from openai_chat_v2 import query_chat
+from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
-# from openai_chat import chat_history
-
 
 app = FastAPI()
 
@@ -91,6 +89,7 @@ async def handle_query(request: Request):
 @app.post("/api/qa/query")
 async def qa_handle_query(request: Request):
     start_time = time.time()
+    revalidate()
 
     data = await request.json()
     search = data["query"]
@@ -109,6 +108,7 @@ async def qa_handle_query(request: Request):
 @app.post("/api/chat/query")
 async def chatbot_handle_query(request: Request):
     start_time = time.time()
+    revalidate()
 
     data = await request.json()
     query = data["query"]
@@ -123,3 +123,8 @@ async def chatbot_handle_query(request: Request):
         "result": result,
         "duration": f"{elapsed_time:.4f} seconds"
     }
+    
+@app.delete("/api/chat/query")
+def handle_memory_delete():
+    memory.clear()
+    print("----- Chatbot memory cleared -----")
