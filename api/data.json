@@ -9,7 +9,8 @@
         "price": 10,
         "currency": "USD",
         "slug": "green-t-shirt",
-        "stock": 49
+        "stock": 49,
+        "image_url": "https://cdn.swell.store/square-one/64ad9abcc165f00012bac026/70d3520454aa87b5091d9d18fd04c533"
     },
     {
         "id": "6452a2f4854f99001217661f",
@@ -21,7 +22,8 @@
         "price": 130,
         "currency": "USD",
         "slug": "pink-pants",
-        "stock": 3
+        "stock": 3,
+        "image_url": "https://cdn.schema.io/square-one/6452a2d70c87a200120b9d81/2e1220ebde80260826ab131a0799616e"
     },
     {
         "id": "6452a1f3ccc5bc0011b5cca2",
@@ -33,7 +35,8 @@
         "price": 100,
         "currency": "USD",
         "slug": "colorful-oversize-women-sweater",
-        "stock": 10
+        "stock": 10,
+        "image_url": "https://cdn.schema.io/square-one/6452a1c40c87a200120b9d7f/04fdf4f4bb67ca6ec046ab2856a9f8f6"
     },
     {
         "id": "6452a14193685e001285b049",
@@ -45,7 +48,8 @@
         "price": 50,
         "currency": "USD",
         "slug": "colorful-beige-women-sweater",
-        "stock": 9
+        "stock": 9,
+        "image_url": "https://cdn.schema.io/square-one/6452a03b5058b300115437da/87090e793fbdeba385a8efcd161ad34d"
     },
     {
         "id": "64529ff6c204cf0011d8901d",
@@ -57,7 +61,8 @@
         "price": 65,
         "currency": "USD",
         "slug": "simple-shirt-with-green-stripes",
-        "stock": 2
+        "stock": 2,
+        "image_url": "https://cdn.schema.io/square-one/64529fd8854f990012176607/4d48ca2aa2fb960ea4aeba9166ea9c19"
     },
     {
         "id": "64529f83854f990012176603",
@@ -69,7 +74,8 @@
         "price": 50,
         "currency": "USD",
         "slug": "white-t-shirt-with-floral-print",
-        "stock": 0
+        "stock": 0,
+        "image_url": "https://cdn.schema.io/square-one/64529f6cc204cf0011d8901a/27c104bd3221a44f107b435e6747cbf9"
     },
     {
         "id": "64529d1793685e001285b02f",
@@ -81,7 +87,8 @@
         "price": 15,
         "currency": "USD",
         "slug": "floral-handkerchief",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/64529c650c87a200120b9d30/1344871b76e65597d48a6527e186c9c6"
     },
     {
         "id": "63452d2c8b0b5d0013083233",
@@ -93,7 +100,8 @@
         "price": 1432,
         "currency": "USD",
         "slug": "striped-dress",
-        "stock": 1
+        "stock": 1,
+        "image_url": "https://cdn.schema.io/square-one/63452e5ece82950012349268/16cf4a69cc3413364c8f5944e7f150eb"
     },
     {
         "id": "633ef76d88453b0012120e0d",
@@ -105,7 +113,8 @@
         "price": 40,
         "currency": "USD",
         "slug": "street-wear-navy-jacket",
-        "stock": 11
+        "stock": 11,
+        "image_url": "https://cdn.schema.io/square-one/633ef73dd164fe0012a7f80a/540e30decbfdebb3083ac96d9b716c23"
     },
     {
         "id": "633ef711d164fe0012a7f7f5",
@@ -117,7 +126,8 @@
         "price": 30,
         "currency": "USD",
         "slug": "lightweight-windbreaker-jacket",
-        "stock": 3
+        "stock": 3,
+        "image_url": "https://cdn.schema.io/square-one/633ef6ccd164fe0012a7f7d4/fa94fcef966734e26ac2a1701b2b71b9"
     },
     {
         "id": "633ef691b34148001210c84e",
@@ -129,7 +139,8 @@
         "price": 15,
         "currency": "USD",
         "slug": "fashionable-shirt-for-men",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef665d164fe0012a7f7b9/b21d80b1973f52a593aaf133e5d620bd"
     },
     {
         "id": "633ef628d164fe0012a7f791",
@@ -141,7 +152,8 @@
         "price": 20,
         "currency": "USD",
         "slug": "red-and-black-fall-shirt",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef5f689e34300129bf216/10ffa86f850a823a0c82edc118fc5ce6"
     },
     {
         "id": "633ef586d164fe0012a7f687",
@@ -153,7 +165,8 @@
         "price": 6,
         "currency": "USD",
         "slug": "simple-t-shirt-with-colored-edges",
-        "stock": 58
+        "stock": 58,
+        "image_url": "https://cdn.schema.io/square-one/633ef54509f6fd0014cdb61d/9723fe309fe17d7a77a3e60303348b2c"
     },
     {
         "id": "633ef4f189e34300129bf1e1",
@@ -165,7 +178,8 @@
         "price": 7,
         "currency": "USD",
         "slug": "black-tank-top",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef4cf88453b0012120dfe/f3f092a7613a552c14bd52b87ac06bd7"
     },
     {
         "id": "633ef484d164fe0012a7f5db",
@@ -177,7 +191,8 @@
         "price": 10,
         "currency": "USD",
         "slug": "sleeve-detail-white-t-shirt",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef465d164fe0012a7f5ca/a7c7285c4d75c6e44a259d78631de747"
     },
     {
         "id": "633ef408b34148001210c80b",
@@ -189,7 +204,8 @@
         "price": 30,
         "currency": "USD",
         "slug": "red-cocktail-dress-off-shoulder",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef3b7d164fe0012a7f5b9/6510150f0064ebdba300f71405a9b433"
     },
     {
         "id": "633ef373b34148001210c7f4",
@@ -201,7 +217,8 @@
         "price": 35,
         "currency": "USD",
         "slug": "black-night-cocktail-dress",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef30ab34148001210c7ef/6df52e0d7fa5fd8624455990979cce5f"
     },
     {
         "id": "633ef12f89e34300129bf17d",
@@ -213,7 +230,8 @@
         "price": 15,
         "currency": "USD",
         "slug": "ruffled-white-summer-dress",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633ef0c689e34300129bf179/e12b510c4e84da30f4099805cbb1af66"
     },
     {
         "id": "633eef08b34148001210c719",
@@ -225,7 +243,8 @@
         "price": 25,
         "currency": "USD",
         "slug": "off-shoulder-green-dress",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/633eee8f09f6fd0014cdb5c0/318401735cc5acf08dc04070548d1b6b"
     },
     {
         "id": "632c7a0b4a19e5001236c64c",
@@ -237,7 +256,8 @@
         "price": 8,
         "currency": "USD",
         "slug": "black-t-shirt",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/632c796f65e9d3001315c1ef/d8e7caef8618826b82ff9949f7558b68"
     },
     {
         "id": "632c78e29f25080011864d0e",
@@ -249,6 +269,7 @@
         "price": 15,
         "currency": "USD",
         "slug": "light-blue-blazer",
-        "stock": null
+        "stock": null,
+        "image_url": "https://cdn.schema.io/square-one/632c787f5d9d790012469829/0cb8364d78b58bf02a3340c191c88491"
     }
 ]

@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "SquareOne AI assistant",
@@ -20,19 +22,27 @@ export default function RootLayout({
           <div className="flex flex-col border-r border-[#1ad197] pr-5 w-96">
             <h3 className="text-3xl mb-5 text-[#1ad197] font-bold flex flex-col">
               <span>Welcome to the</span>
-              <span>SquareOne AI Assistant</span>
+              <span>SquareOne AI Project</span>
             </h3>
-            <Link
-              className="text-md opacity-70 mt-10 underline"
-              title="Visit Square One"
-              href="https://squareone.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit the Square One store
-            </Link>
+            <div className="flex flex-col space-y-4">
+              <Link className="text-md opacity-70 underline" href="/">
+                Assistant and Product search
+              </Link>
+              <Link className="text-md opacity-70 underline" href="/products">
+                Products
+              </Link>
+              <Link
+                className="text-md opacity-70 underline"
+                title="Visit Square One"
+                href="https://squareone.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit the Square One store
+              </Link>
+            </div>
           </div>
-          {children}
+          <Suspense fallback={<Loading />}>{children}</Suspense>
         </div>
       </body>
     </html>

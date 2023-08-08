@@ -2,7 +2,7 @@ import time
 
 from fastapi import FastAPI, Request
 from openai_config import revalidate
-from openai_qa import query_qa
+from openai_related import query_related
 from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -53,44 +53,7 @@ def handle_revalidate():
 # ################################################################################
 # # OPTION: Revalidate on post
 # ################################################################################
-@app.post("/api/query")
-async def handle_query(request: Request):
-    start_time = time.time()
-    # revalidate()
 
-    data = await request.json()
-    search = data["query"]
-
-    result = query_qa(search)
-
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-
-    return {
-        "status": "ok",
-        "result": result,
-        "duration": f"{elapsed_time:.4f} seconds"
-    }
-    
-@app.post("/api/qa/query")
-async def qa_handle_query(request: Request):
-    start_time = time.time()
-    # revalidate()
-
-    data = await request.json()
-    search = data["query"]
-
-    result = query_qa(search)
-
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-
-    return {
-        "status": "ok",
-        "result": result,
-        "duration": f"{elapsed_time:.4f} seconds"
-    }
-    
 @app.post("/api/chat/query")
 async def chatbot_handle_query(request: Request):
     start_time = time.time()
@@ -114,3 +77,24 @@ async def chatbot_handle_query(request: Request):
 def handle_memory_delete():
     memory.clear()
     print("----- Chatbot memory cleared -----")
+    
+    
+    
+@app.post("/api/related")
+async def handle_query(request: Request):
+    start_time = time.time()
+
+    data = await request.json()
+    search = data["query"]
+
+    result = query_related(search)
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+
+    return {
+        "status": "ok",
+        "result": result,
+        "duration": f"{elapsed_time:.4f} seconds"
+    }
+    

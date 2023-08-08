@@ -15,22 +15,24 @@ from langchain.chat_models import ChatOpenAI
 ################################################################################
 # Make OpenAI query
 ################################################################################
-def query_qa(query):
-    instance = get_chroma_instance()
-    prompt_template = """
-    #You are a shopping assistant. Use the following pieces of context to answer the question at the end. Take your time to think and analyze your answer. If you don't know the answer, just say that you don't know, don't try to make up an answer.
-
-    #Return a conversational answer about the question in a 'text' key.
-    #Return an array with products in a 'products' key just if you found products for the user question.
-    #Each product should have a 'id', 'name', 'description', 'price', 'sale', 'sale_price', 'currency', 'slug', 'active' and 'stock' keys.
-    #Don't return duplicated products.
-    #Don't return non active products.
-    #Don't show products that don't exist in the database.
+def query_related(query):
     
+    instance = get_chroma_instance()
+    
+    prompt_template = """
+    You will receive a product object delimited with <>. Your task is to use the following pieces of context to find a maximum of three products that are related to the product delimited with <>.
+    If you can not find any related products, just return an empty array.
+    Don't return duplicated products.
+    Don't return the product provided in the final result.
+    Return an array of products containing these keys: id, name, description, slug, price, currency, image_url.
+    Don't return an object.
+    Bring a maximum of 3 products.
 
-    #Context: {context}
-    #Question: {question}
-    #Answer in JSON format:"""
+    {context}
+
+    Product: <{question}>
+    Answer in JSON format:"""
+    
 
     PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 

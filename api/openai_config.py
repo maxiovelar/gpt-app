@@ -52,6 +52,7 @@ if response.status_code == 200:
                 "currency": item.get("currency", None),
                 "slug": item.get("slug", None),
                 "stock": item.get("stock_level", None),
+                "image_url": item.get("images")[0].get("file").get("url")
             }
             extracted_data_list.append(extracted_data)    
     
