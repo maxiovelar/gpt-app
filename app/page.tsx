@@ -8,15 +8,16 @@ import { UpdateIcon } from "./_components/icons/UpdateIcon";
 import cx from "classnames";
 import { LoadingText } from "./_components/LoadingText";
 import { revalidateDB } from "./utils/revalidate";
+import productsData from "../api/data.json";
 
 interface Product {
   id: string;
   name: string;
   price: number;
   sale: boolean;
-  sale_price: number;
+  sale_price: number | null;
   currency: string;
-  stock: number;
+  stock: number | null;
   description: string;
   slug: string;
   active: boolean;
@@ -66,11 +67,23 @@ const Home = () => {
           handleError(data.error);
           return;
         }
+        console.log("DATA:", data);
         const response = data.result.text;
         const products = data.result.products;
+        const dataJsonProducts: Product[] = [];
+
+        if (products.length > 0) {
+          for (const product of products) {
+            const finalProduct = productsData.find(
+              (prod) => prod.id === product
+            );
+            finalProduct && dataJsonProducts.push(finalProduct);
+          }
+        }
+        console.log("PRODUCTS FROM DATA JSON:", dataJsonProducts);
         setChatMessages((prev) => [
           ...prev,
-          { role: "assistant", content: response, products: products },
+          { role: "assistant", content: response, products: dataJsonProducts },
         ]);
         setIsLoading(false);
       } catch (error) {
@@ -182,9 +195,12 @@ const Home = () => {
                                     {product.currency} {product.price}
                                   </p>
                                 </div>
-                                <p className="text-gray-100 text-sm">
-                                  {product.description}
-                                </p>
+                                <p
+                                  className="text-gray-100 text-sm"
+                                  dangerouslySetInnerHTML={{
+                                    __html: product.description,
+                                  }}
+                                />
                               </Link>
                             );
                           })}
