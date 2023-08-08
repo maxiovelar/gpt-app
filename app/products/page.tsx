@@ -38,13 +38,15 @@ const Products = async () => {
   return (
     <>
       <div className="space-y-3">
-        <h2 className="text-2xl font-bold text-[#1ad197]">Products</h2>
-        <div className="grid grid-cols-3 gap-10">
+        <h2 className="text-4xl text-center border-b pb-5 mb-8 font-bold text-[#1ad197]">
+          Products
+        </h2>
+        <div className="grid grid-cols-3 gap-8">
           {data.results.map((product: Product) => {
             const imageUrl = product.images[0].file.url;
             return (
               <Link href={`/products/${product.slug}`} key={product.id}>
-                <div className="border border-[#1ad197] rounded-lg hover:bg-[#1ad197] duration-300 cursor-pointer p-5 text-[#1ad197]  hover:text-white  hover:border-white h-full">
+                <div className="border hover:border-[#1ad197] bg-[#1ad197] rounded-lg duration-300 cursor-pointer p-5 hover:text-[#1ad197] text-white hover:bg-white border-white h-full">
                   <div className="h-96 relative">
                     <Image
                       src={imageUrl}

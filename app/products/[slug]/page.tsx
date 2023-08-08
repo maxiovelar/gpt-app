@@ -25,23 +25,26 @@ const Product = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex justify-center">
-        <div className="rounded-lg bg-[#1ad197] duration-300 p-5 text-white  hover:border-white h-full w-1/3">
-          <div className="h-96 relative">
-            <Image
-              src={imageUrl}
-              alt={product.name}
-              fill
-              className="pb-3 mb-3 border-b"
-            />
-          </div>
-          <p className="mt-3 text-xl text-center">{product.name}</p>
-          <p className="text-black mt-3">{product.description}</p>
+      <div className="flex flex-row gap-10 mb-5 pb-5 border-b border-[#1ad197]">
+        <div className="h-96 w-full relative">
+          <Image
+            src={imageUrl}
+            alt={product.name}
+            fill
+            className="p-3 mb-3 border"
+          />
+        </div>
+        <div>
+          <p className="text-2xl font-bold">{product.name}</p>
+          <p
+            className="text-black mt-3"
+            dangerouslySetInnerHTML={{
+              __html: product.description,
+            }}
+          ></p>
         </div>
       </div>
-      <div>
-        <h3>Related products:</h3>
-      </div>
+      <h3 className="text-xl">Related products:</h3>
     </div>
   );
 };
