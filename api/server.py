@@ -28,40 +28,26 @@ app.add_middleware(
 )    
     
 # ################################################################################
-# # OPTION: Revalidate on get
+# # OPTION: Revalidate on get at the first page load
 # ################################################################################
-# @app.get("/api/revalidate")
-# def handle_revalidate():
-#     start_time = time.time()
+@app.get("/api/revalidate")
+def handle_revalidate():
+    start_time = time.time()
 
-#     revalidate()
+    revalidate()
 
-#     end_time = time.time()
-#     elapsed_time = end_time - start_time
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    
+    print({
+        "status": "Revalidated",
+        "duration": f"{elapsed_time:.4f} seconds"
+    })
 
-#     return {
-#         "status": "Revalidated",
-#         "duration": f"{elapsed_time:.4f} seconds"
-#     }
-
-
-# @app.post("/api/query")
-# async def handle_query(request: Request):
-#     start_time = time.time()
-
-#     data = await request.json()
-#     search = data["query"]
-
-#     result = query(search)
-
-#     end_time = time.time()
-#     elapsed_time = end_time - start_time
-
-#     return {
-#         "status": "ok",
-#         "result": result,
-#         "duration": f"{elapsed_time:.4f} seconds"
-#     }
+    return {
+        "status": "Revalidated",
+        "duration": f"{elapsed_time:.4f} seconds"
+    }
 
 
 # ################################################################################
@@ -70,7 +56,7 @@ app.add_middleware(
 @app.post("/api/query")
 async def handle_query(request: Request):
     start_time = time.time()
-    revalidate()
+    # revalidate()
 
     data = await request.json()
     search = data["query"]
@@ -89,7 +75,7 @@ async def handle_query(request: Request):
 @app.post("/api/qa/query")
 async def qa_handle_query(request: Request):
     start_time = time.time()
-    revalidate()
+    # revalidate()
 
     data = await request.json()
     search = data["query"]
@@ -108,7 +94,7 @@ async def qa_handle_query(request: Request):
 @app.post("/api/chat/query")
 async def chatbot_handle_query(request: Request):
     start_time = time.time()
-    revalidate()
+    # revalidate()
 
     data = await request.json()
     query = data["query"]

@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Spinner from "./_components/Spinner";
 import { UpdateIcon } from "./_components/icons/UpdateIcon";
 import cx from "classnames";
 import { LoadingText } from "./_components/LoadingText";
+import { revalidateDB } from "./utils/revalidate";
 
 interface Product {
   id: string;
@@ -31,6 +32,10 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const [chatMessages, setChatMessages] = useState<MessagesProps[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    revalidateDB();
+  }, []);
 
   const handleError = (err: string) => {
     setIsLoading(false);
@@ -61,7 +66,6 @@ const Home = () => {
           handleError(data.error);
           return;
         }
-        // console.log(data);
         const response = data.result.text;
         const products = data.result.products;
         setChatMessages((prev) => [

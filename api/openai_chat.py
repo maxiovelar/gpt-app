@@ -29,8 +29,6 @@ def query_chat(query):
     #You are a shopping assistant. Use the following pieces of context to answer the question at the end. Take your time to think and analyze your answer. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 
     #Return a conversational answer about the question in a 'text' key.
-    #Return an array with products in a 'products' key just if you found products for the user question.
-    #Each product should have a 'id', 'name', 'description', 'price', 'sale', 'sale_price', 'currency', 'slug', 'active' and 'stock' keys.
     #Don't return duplicated products.
     #Don't return non active products.
     #Don't show products that don't exist in the database.
@@ -52,8 +50,6 @@ def query_chat(query):
         memory=memory
     )
     
-    print(memory.buffer)
-
     res = qa.run(query)
 
     return json.loads(res)
