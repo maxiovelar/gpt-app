@@ -70,7 +70,7 @@ const Product = async ({ params }: { params: { slug: string } }) => {
       </div>
       <h3 className="text-xl mb-5">Related products:</h3>
       <div className="grid grid-cols-3 gap-5">
-        {related_products.result.map((related_product) => {
+        {related_products?.result.map((related_product) => {
           return (
             <ProductCard product={related_product} key={related_product.id} />
           );
