@@ -5,7 +5,7 @@ from openai_config import revalidate
 from openai_related import query_related
 from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
-from pinecone_db import reinitialize_index
+from pinecone_db import delete_index
 
 app = FastAPI()
 
@@ -52,15 +52,15 @@ def handle_revalidate():
     }
     
 # ################################################################################
-# # Delete and Re-Initialize pinecone index - use just when is needed
+# # Delete pinecone index - use just when is needed
 # ################################################################################
 
 @app.delete("/api/pinecone-index")
 def handle_pinecone_index_delete():
-    reinitialize_index()
+    delete_index()
     return {
         "status": "ok",
-        "message": "Pinecone index was deleted and is re-initializing, please wait a few minutes",
+        "message": "Pinecone index was deleted, please revalidate the DB before using the app again",
     }
     
 # ################################################################################

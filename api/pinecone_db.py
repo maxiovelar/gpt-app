@@ -55,6 +55,6 @@ def get_db_embeddings(docs):
     )
 
 
-def reinitialize_index():
+def delete_index():
     pinecone.delete_index(INDEX_NAME)
     
