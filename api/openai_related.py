@@ -7,8 +7,8 @@ import json
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
-from openai_config import get_chroma_instance
 from langchain.chat_models import ChatOpenAI
+from pinecone_db import get_db_instance
 
 
 
@@ -17,7 +17,7 @@ from langchain.chat_models import ChatOpenAI
 ################################################################################
 def query_related(query):
     
-    instance = get_chroma_instance()
+    db = get_db_instance()
     
     prompt_template = """
     You will receive a product object delimited with <>. Your task is to use the following pieces of context to find a maximum of three products that are related to the product delimited with <>.
@@ -41,7 +41,7 @@ def query_related(query):
     qa = RetrievalQA.from_chain_type(
         llm=ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0,openai_api_key=os.getenv('OPENAI_API_KEY')),
         chain_type="stuff",
-        retriever=instance.as_retriever(),
+        retriever=db.as_retriever(),
         chain_type_kwargs=chain_type_kwargs
     )
 

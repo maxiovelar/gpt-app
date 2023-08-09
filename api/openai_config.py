@@ -8,11 +8,11 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import JSONLoader
 from langchain.prompts import PromptTemplate
+from pinecone_db import get_db_embeddings
 
 DATABASE_PATH = './db/'
 
@@ -64,31 +64,21 @@ else:
     print(f"Request failed with status code: {response.status_code}")
 
 ################################################################################
-# Generate new Chroma instance
-################################################################################
-def get_chroma_instance():
-    embeddings = OpenAIEmbeddings(openai_api_key=os.getenv('OPENAI_API_KEY'))
-    return  Chroma(embedding_function=embeddings, persist_directory=DATABASE_PATH)
-
-################################################################################
-# Read documents from JSON file and add them to Chroma instance
+# Read documents from JSON file and add them to pinecone instance
 ################################################################################
 def revalidate():
     if os.path.exists(DATABASE_PATH):
         shutil.rmtree(DATABASE_PATH)
         
-    instance = get_chroma_instance()
     loader = JSONLoader(
         file_path='./data.json',
         jq_schema='.[]',
         text_content=False
     )
+    
+    documents = loader.load()
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100, separators= ["\n\n", "\n", "(?<=\. )", ";", ",", " ", ""]) # se puede pasar regex a los separators
+    docs = text_splitter.split_documents(documents)
 
-    if loader:
-        documents = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100, separators= ["\n\n", "\n", "(?<=\. )", ";", ",", " ", ""]) # se puede pasar regex a los separators
-        texts = text_splitter.split_documents(documents)
-        instance.add_documents(texts)
-
-    instance.persist()
+    get_db_embeddings(docs)
 
