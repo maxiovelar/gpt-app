@@ -7,7 +7,6 @@ import Spinner from "./_components/Spinner";
 import { UpdateIcon } from "./_components/icons/UpdateIcon";
 import cx from "classnames";
 import { LoadingText } from "./_components/LoadingText";
-import { revalidateDB } from "./utils/revalidate";
 import productsData from "../api/data.json";
 
 interface Product {
@@ -33,10 +32,6 @@ const Home = () => {
   const [query, setQuery] = useState("");
   const [chatMessages, setChatMessages] = useState<MessagesProps[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    revalidateDB();
-  }, []);
 
   const handleError = (err: string) => {
     setIsLoading(false);

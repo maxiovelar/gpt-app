@@ -5,6 +5,7 @@ from openai_config import revalidate
 from openai_related import query_related
 from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
+from pinecone_db import reinitialize_index
 
 app = FastAPI()
 
@@ -26,10 +27,11 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )    
-    
+
 # ################################################################################
-# # OPTION: Revalidate on get at the first page load
+# # Revalidate DB
 # ################################################################################
+
 @app.get("/api/revalidate")
 def handle_revalidate():
     start_time = time.time()
@@ -48,16 +50,26 @@ def handle_revalidate():
         "status": "Revalidated",
         "duration": f"{elapsed_time:.4f} seconds"
     }
-
-
+    
 # ################################################################################
-# # OPTION: Revalidate on post
+# # Delete and Re-Initialize pinecone index - use just when is needed
+# ################################################################################
+
+@app.delete("/api/pinecone-index")
+def handle_pinecone_index_delete():
+    reinitialize_index()
+    return {
+        "status": "ok",
+        "message": "Pinecone index was deleted and is re-initializing, please wait a few minutes",
+    }
+    
+# ################################################################################
+# # Chatbot Routes
 # ################################################################################
 
 @app.post("/api/chat/query")
 async def chatbot_handle_query(request: Request):
     start_time = time.time()
-    # revalidate()
 
     data = await request.json()
     query = data["query"]
@@ -78,7 +90,9 @@ def handle_memory_delete():
     memory.clear()
     print("----- Chatbot memory cleared -----")
     
-    
+# ################################################################################
+# # Related Products Routes
+# ################################################################################
     
 @app.post("/api/related")
 async def handle_query(request: Request):

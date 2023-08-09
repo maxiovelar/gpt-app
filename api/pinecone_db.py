@@ -40,7 +40,7 @@ def get_db_instance():
 ################################################################################
 def get_db_embeddings(docs):
     embeddings = get_embeddings()
-
+    
     if INDEX_NAME not in pinecone.list_indexes():
         pinecone.create_index(
         name = INDEX_NAME,
@@ -53,3 +53,8 @@ def get_db_embeddings(docs):
         embeddings,
         index_name = INDEX_NAME
     )
+
+
+def reinitialize_index():
+    pinecone.delete_index(INDEX_NAME)
+    

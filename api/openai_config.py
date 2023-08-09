@@ -67,6 +67,7 @@ else:
 # Read documents from JSON file and add them to pinecone instance
 ################################################################################
 def revalidate():
+    
     if os.path.exists(DATABASE_PATH):
         shutil.rmtree(DATABASE_PATH)
         
@@ -81,4 +82,3 @@ def revalidate():
     docs = text_splitter.split_documents(documents)
 
     get_db_embeddings(docs)
-
