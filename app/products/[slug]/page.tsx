@@ -50,15 +50,17 @@ const Product = async ({ params }: { params: { slug: string } }) => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row gap-10 mb-5 pb-5 border-b border-[#1ad197]">
-        <div className="h-96 w-full relative">
+        <div className="flex justify-center">
           <Image
             src={imageUrl}
             alt={product.name}
-            fill
+            width={500}
+            height={500}
+            objectFit="cover"
             className="p-3 mb-3 border"
           />
         </div>
-        <div>
+        <div className="">
           <p className="text-2xl font-bold">{product.name}</p>
           <p
             className="text-black mt-3"

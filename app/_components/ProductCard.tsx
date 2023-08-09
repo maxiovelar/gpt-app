@@ -11,8 +11,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <Link href={`/products/${product.slug}`} key={product.id}>
-      <div className="border hover:border-[#1ad197] bg-[#1ad197] rounded-lg duration-300 cursor-pointer p-5 hover:text-[#1ad197] text-white hover:bg-white border-white h-full">
-        <div className="h-96 relative">
+      <div className="border hover:border-[#1ad197] bg-[#1ad197] rounded-lg duration-300 cursor-pointer p-5 hover:text-[#1ad197] text-white hover:bg-white border-white">
+        <div className="h-80 w-full relative">
           <Image
             src={imageUrl}
             alt={product.name}
@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => {
         </div>
         <p className="mt-3 text-xl text-center">{product.name}</p>
         <p
-          className="text-black mt-3"
+          className="text-black mt-3 h-60"
           dangerouslySetInnerHTML={{
             __html: product.description,
           }}
