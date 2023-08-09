@@ -47,7 +47,6 @@ const Product = async ({ params }: { params: { slug: string } }) => {
   const related_products = await getRelatedProducts(product);
   const imageUrl = product.images[0].file.url;
 
-  console.log(related_products);
   return (
     <div className="flex flex-col">
       <div className="flex flex-row gap-10 mb-5 pb-5 border-b border-[#1ad197]">
@@ -71,7 +70,7 @@ const Product = async ({ params }: { params: { slug: string } }) => {
       </div>
       <h3 className="text-xl mb-5">Related products:</h3>
       <div className="grid grid-cols-3 gap-5">
-        {related_products?.result.map((related_product) => {
+        {related_products.result.map((related_product) => {
           return (
             <ProductCard product={related_product} key={related_product.id} />
           );
