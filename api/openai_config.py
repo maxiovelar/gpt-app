@@ -3,7 +3,6 @@ import shutil
 import time
 import json
 import requests
-import nest_asyncio
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
