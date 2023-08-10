@@ -69,7 +69,7 @@ const Home = () => {
         const products = data.result.products;
         const dataJsonProducts: Product[] = [];
 
-        if (products.length > 0) {
+        if (products?.length > 0) {
           for (const product of products) {
             const finalProduct = productsData.find(
               (prod) => prod.id === product
