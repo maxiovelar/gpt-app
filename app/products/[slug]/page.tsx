@@ -1,30 +1,12 @@
 //@ts-nocheck
 
 import ProductCard from "@/_components/ProductCard";
-import axios from "axios";
 import Image from "next/image";
-import Link from "next/link";
-
-async function getData(slug: string) {
-  try {
-    const res = await fetch(`https://api.swell.store/products?slug=${slug}`, {
-      method: "get",
-      headers: {
-        Authorization:
-          "Basic c3F1YXJlLW9uZTpIclBiamV5TTltWXZzbVYxRUxHWVZKekpON0lGeHJoUQ==",
-        "Content-Type": "application/json",
-      },
-    });
-    const products = await res.json();
-    return products;
-  } catch (error) {
-    return [];
-  }
-}
+import productsData from "../../../api/data.json";
 
 async function getRelatedProducts(product) {
   try {
-    const res = await fetch("http://localhost:8000/api/related", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/related`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -42,10 +24,9 @@ async function getRelatedProducts(product) {
 
 const Product = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-  const { results } = await getData(slug);
-  const product = results[0];
+  const product = productsData.find((prod) => prod.slug === slug);
   const related_products = await getRelatedProducts(product);
-  const imageUrl = product.images[0].file.url;
+  const imageUrl = product.image_url;
 
   return (
     <div className="flex flex-col">
@@ -56,8 +37,8 @@ const Product = async ({ params }: { params: { slug: string } }) => {
             alt={product.name}
             width={500}
             height={500}
-            objectFit="cover"
             className="p-3 mb-3 border"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="">
@@ -67,12 +48,12 @@ const Product = async ({ params }: { params: { slug: string } }) => {
             dangerouslySetInnerHTML={{
               __html: product.description,
             }}
-          ></p>
+          />
         </div>
       </div>
       <h3 className="text-xl mb-5">Related products:</h3>
       <div className="grid grid-cols-3 gap-5">
-        {related_products?.result.map((related_product) => {
+        {related_products.result.map((related_product) => {
           return (
             <ProductCard product={related_product} key={related_product.id} />
           );

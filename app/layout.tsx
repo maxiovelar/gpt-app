@@ -1,6 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Suspense } from "react";
 import Loading from "./loading";
@@ -34,7 +33,7 @@ export default function RootLayout({
               <Link
                 className="text-md opacity-70 underline"
                 title="Visit Square One"
-                href="https://squareone.vercel.app/"
+                href={process.env.NEXT_PUBLIC_SO_URL as string}
                 target="_blank"
                 rel="noopener noreferrer"
               >

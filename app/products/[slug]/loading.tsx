@@ -1,5 +1,7 @@
+import { LoadingText } from "@/_components/LoadingText";
+
 const Loading = () => {
-  return <div className="animate-pulse text-2xl">Loading</div>;
+  return <LoadingText isLoading />;
 };
 
 export default Loading;

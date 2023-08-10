@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, FormEvent, useEffect } from "react";
+import React, { useState, FormEvent } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Spinner from "./_components/Spinner";
@@ -51,13 +51,15 @@ const Home = () => {
       setChatMessages((prevMessages) => [...prevMessages, newMessage]);
 
       try {
-        const { data } = await axios.post("/api/chat/query", {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          // requestMessages: [...chatMessages, newMessage],
-          query: inputQuery,
-        });
+        const { data } = await axios.post(
+          `${process.env.NEXT_PUBLIC_API_URL}/api/chat/query`,
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            query: inputQuery,
+          }
+        );
         if (data?.error) {
           handleError(data.error);
           return;
@@ -89,7 +91,7 @@ const Home = () => {
 
   const handleClear = async () => {
     setChatMessages([]);
-    await axios.delete("/api/chat/query");
+    await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/api/chat/query`);
   };
 
   const finalMessages = [...chatMessages].reverse();
