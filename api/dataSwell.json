@@ -1,0 +1,2627 @@
+{
+    "count": 22,
+    "page_count": 1,
+    "page": 1,
+    "results": [
+        {
+            "name": "Green T-shirt",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "64ad9abcc165f00012bac026",
+                        "date_uploaded": "2023-07-11T18:09:00.605Z",
+                        "length": 25548,
+                        "md5": "70d3520454aa87b5091d9d18fd04c533",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "url": "https://cdn.swell.store/square-one/64ad9abcc165f00012bac026/70d3520454aa87b5091d9d18fd04c533",
+                        "width": 547,
+                        "height": 612
+                    },
+                    "id": "64ad9af7e8c181001212d9c3"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 10,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "This is a green t-shirt",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "green-t-shirt",
+            "attributes": {
+                "color": [
+                    "Red",
+                    "Green",
+                    "Blue"
+                ],
+                "material": [
+                    "Cotton",
+                    "Poliester",
+                    "Wool"
+                ]
+            },
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 10,
+            "stock_tracking": true,
+            "options": [
+                {
+                    "id": "64ad9ac73f2a865549533d71",
+                    "name": "Color",
+                    "values": [
+                        {
+                            "id": "64ad9af73f2a865549533d74",
+                            "name": "Red"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d75",
+                            "name": "Green"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d76",
+                            "name": "Blue"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "color"
+                },
+                {
+                    "id": "64ad9ad03f2a865549533d72",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "64ad9af73f2a865549533d77",
+                            "name": "S"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d78",
+                            "name": "M"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d79",
+                            "name": "L"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d7a",
+                            "name": "XL"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                },
+                {
+                    "id": "64ad9adf3f2a865549533d73",
+                    "name": "Material",
+                    "values": [
+                        {
+                            "id": "64ad9af73f2a865549533d7b",
+                            "name": "Cotton"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d7c",
+                            "name": "Poliester"
+                        },
+                        {
+                            "id": "64ad9af73f2a865549533d7d",
+                            "name": "Wool"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "material"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2023-07-11T18:09:59.472Z",
+            "stock_status": "in_stock",
+            "date_updated": "2023-07-11T18:15:22.009Z",
+            "category_index": {
+                "sort": {
+                    "632c78977a6b500012602db8": 0
+                },
+                "id": [
+                    "632c78977a6b500012602db8"
+                ]
+            },
+            "stock_level": 49,
+            "stock_purchasable": false,
+            "id": "64ad9af7e8c181001212d9c2"
+        },
+        {
+            "name": "Pink pants",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "6452a2d70c87a200120b9d81",
+                        "date_uploaded": "2023-05-03T18:07:19.547Z",
+                        "length": 166792,
+                        "md5": "2e1220ebde80260826ab131a0799616e",
+                        "filename": null,
+                        "url": "https://cdn.schema.io/square-one/6452a2d70c87a200120b9d81/2e1220ebde80260826ab131a0799616e",
+                        "width": 327,
+                        "height": 436
+                    },
+                    "id": "6452a2f4854f990012176620"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 130,
+                    "sale": true,
+                    "sale_price": 100,
+                    "prices": []
+                }
+            },
+            "variable": false,
+            "description": "Our Pink Pants for women are a stylish and vibrant choice. With a flattering fit and comfortable fabric, they add a fun and feminine touch to any outfit. Perfect for expressing your unique sense of fashion and adding a pop of color to your look.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "pink-pants",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 130,
+            "stock_tracking": true,
+            "options": [],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 100,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2023-05-03T18:07:48.902Z",
+            "stock_status": "in_stock",
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 0,
+                    "632c7a7865e9d3001315c1fe": 3
+                },
+                "id": [
+                    "632c79709f25080011864d2a",
+                    "632c7a7865e9d3001315c1fe"
+                ]
+            },
+            "date_updated": "2023-07-13T05:03:46.023Z",
+            "popularity": 4,
+            "stock_level": 3,
+            "stock_purchasable": false,
+            "review_rating": 3.1,
+            "id": "6452a2f4854f99001217661f"
+        },
+        {
+            "name": "Colorful oversize women sweater",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "6452a1c40c87a200120b9d7f",
+                        "date_uploaded": "2023-05-03T18:02:44.594Z",
+                        "length": 151724,
+                        "md5": "04fdf4f4bb67ca6ec046ab2856a9f8f6",
+                        "filename": null,
+                        "url": "https://cdn.schema.io/square-one/6452a1c40c87a200120b9d7f/04fdf4f4bb67ca6ec046ab2856a9f8f6",
+                        "width": 329,
+                        "height": 436
+                    },
+                    "id": "6452a1f3ccc5bc0011b5cca3"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 100,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": false,
+            "description": "Stay cozy and fashionable with our Colorful Oversize Women&#39;s Sweater. With vibrant colors and a comfortable fit, it&#39;s the perfect choice for adding a playful touch to your outfit. Stay warm and stylish all day long with this trendy sweater.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "colorful-oversize-women-sweater",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 100,
+            "stock_tracking": true,
+            "options": [],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2023-05-03T18:03:31.385Z",
+            "stock_status": "in_stock",
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 0
+                },
+                "id": [
+                    "632c79709f25080011864d2a"
+                ]
+            },
+            "date_updated": "2023-07-03T15:43:16.155Z",
+            "popularity": 1,
+            "stock_level": 10,
+            "review_rating": null,
+            "id": "6452a1f3ccc5bc0011b5cca2"
+        },
+        {
+            "name": "Colorful beige women sweater",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "6452a03b5058b300115437da",
+                        "date_uploaded": "2023-05-03T17:56:11.125Z",
+                        "length": 244312,
+                        "md5": "87090e793fbdeba385a8efcd161ad34d",
+                        "filename": null,
+                        "url": "https://cdn.schema.io/square-one/6452a03b5058b300115437da/87090e793fbdeba385a8efcd161ad34d",
+                        "width": 327,
+                        "height": 436
+                    },
+                    "id": "6452a14193685e001285b04a"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 50,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": false,
+            "description": "Stay cozy and stylish with our Colorful Beige Women&#39;s Sweater. Made with soft fabric, it keeps you warm and comfortable. The beige color is beautifully complemented by colorful accents, adding a playful touch to your outfit. Versatile and chic, this sweater is a perfect choice for any occasion.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "colorful-beige-women-sweater",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 50,
+            "stock_tracking": true,
+            "options": [],
+            "additional_information": null,
+            "currency": "USD",
+            "type": "physical",
+            "date_created": "2023-05-03T18:00:33.087Z",
+            "stock_status": "in_stock",
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 0
+                },
+                "id": [
+                    "632c79709f25080011864d2a"
+                ]
+            },
+            "date_updated": "2023-06-29T18:43:56.585Z",
+            "prices": [],
+            "sale": false,
+            "sale_price": null,
+            "stock_level": 9,
+            "popularity": 1,
+            "review_rating": null,
+            "id": "6452a14193685e001285b049"
+        },
+        {
+            "name": "Simple shirt with green stripes",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "64529fd8854f990012176607",
+                        "date_uploaded": "2023-05-03T17:54:32.417Z",
+                        "length": 323252,
+                        "md5": "4d48ca2aa2fb960ea4aeba9166ea9c19",
+                        "filename": null,
+                        "url": "https://cdn.schema.io/square-one/64529fd8854f990012176607/4d48ca2aa2fb960ea4aeba9166ea9c19",
+                        "width": 327,
+                        "height": 436
+                    },
+                    "id": "64529ff6c204cf0011d8901e"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 65,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": false,
+            "description": "Our White and Green Striped Shirt is a stylish and comfortable choice. With its classic striped design, this shirt adds a touch of freshness to your look. Versatile for any occasion, it effortlessly enhances your style with its simple yet fashionable appeal.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "simple-shirt-with-green-stripes",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 65,
+            "stock_tracking": true,
+            "options": [],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2023-05-03T17:55:02.805Z",
+            "stock_status": "in_stock",
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 0,
+                    "632c7988f79cf20012c3e5fa": 0
+                },
+                "id": [
+                    "632c79709f25080011864d2a",
+                    "632c7988f79cf20012c3e5fa"
+                ]
+            },
+            "date_updated": "2023-06-29T18:41:51.766Z",
+            "stock_level": 2,
+            "stock_purchasable": false,
+            "review_rating": null,
+            "id": "64529ff6c204cf0011d8901d"
+        },
+        {
+            "name": "White T-shirt with Floral print",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "64529f6cc204cf0011d8901a",
+                        "date_uploaded": "2023-05-03T17:52:44.951Z",
+                        "length": 258272,
+                        "md5": "27c104bd3221a44f107b435e6747cbf9",
+                        "filename": null,
+                        "url": "https://cdn.schema.io/square-one/64529f6cc204cf0011d8901a/27c104bd3221a44f107b435e6747cbf9",
+                        "width": 327,
+                        "height": 436
+                    },
+                    "id": "64529f83854f990012176604"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 50,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": false,
+            "description": "Our White T-Shirt with Floral Print is a stylish and comfortable option for casual wear. The white color creates a clean look, while the floral print adds a touch of style. Made with soft fabric, it ensures all-day comfort. Pair it with jeans or shorts for an effortless and fashionable outfit.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "white-t-shirt-with-floral-print",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 50,
+            "stock_tracking": true,
+            "options": [],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2023-05-03T17:53:07.327Z",
+            "stock_status": "out_of_stock",
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 0,
+                    "632c7988f79cf20012c3e5fa": 0,
+                    "632c7a7865e9d3001315c1fe": 2
+                },
+                "id": [
+                    "632c79709f25080011864d2a",
+                    "632c7988f79cf20012c3e5fa",
+                    "632c7a7865e9d3001315c1fe"
+                ]
+            },
+            "date_updated": "2023-07-06T15:55:15.160Z",
+            "stock_purchasable": false,
+            "review_rating": 4,
+            "stock_level": 0,
+            "id": "64529f83854f990012176603"
+        },
+        {
+            "name": "Floral handkerchief",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "64529c650c87a200120b9d30",
+                        "date_uploaded": "2023-05-03T17:39:49.153Z",
+                        "length": 224512,
+                        "md5": "1344871b76e65597d48a6527e186c9c6",
+                        "filename": null,
+                        "url": "https://cdn.schema.io/square-one/64529c650c87a200120b9d30/1344871b76e65597d48a6527e186c9c6",
+                        "width": 327,
+                        "height": 436
+                    },
+                    "id": "64529d1793685e001285b030"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 15,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": false,
+            "description": "Our Floral Handkerchief is a charming accessory that adds a touch of elegance to any outfit. With its delicate floral pattern and soft fabric, it combines style and functionality effortlessly. Whether used as a fashion statement or for practical purposes, this versatile handkerchief is a must-have addition to your accessories collection.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "floral-handkerchief",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 15,
+            "stock_tracking": false,
+            "options": [],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2023-05-03T17:42:47.805Z",
+            "stock_status": null,
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 0,
+                    "64529ce693685e001285b02c": 0,
+                    "632c7a7865e9d3001315c1fe": 1
+                },
+                "id": [
+                    "632c79709f25080011864d2a",
+                    "64529ce693685e001285b02c",
+                    "632c7a7865e9d3001315c1fe"
+                ]
+            },
+            "date_updated": "2023-07-05T14:03:59.559Z",
+            "review_rating": 3,
+            "id": "64529d1793685e001285b02f"
+        },
+        {
+            "name": "Red top",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "63452e5ece82950012349268",
+                        "date_uploaded": "2022-10-11T08:50:38.402Z",
+                        "length": 2268756,
+                        "md5": "16cf4a69cc3413364c8f5944e7f150eb",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/63452e5ece82950012349268/16cf4a69cc3413364c8f5944e7f150eb",
+                        "width": 4460,
+                        "height": 2975
+                    },
+                    "id": "63452d2c8b0b5d0013083234"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 1432,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Red Top is a stylish and bold choice. With its vibrant color and comfortable fit, it&#39;s perfect for any occasion. Whether you dress it up or down, this top is a fabulous way to showcase your fashionable side.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "striped-dress",
+            "attributes": {
+                "color": [
+                    "white",
+                    "red",
+                    "blue",
+                    "green"
+                ],
+                "material": [
+                    "polyester",
+                    "cotton",
+                    "wool"
+                ]
+            },
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 1432,
+            "stock_tracking": true,
+            "options": [
+                {
+                    "id": "63452ce4ff379c780c8f63ad",
+                    "values": [
+                        {
+                            "id": "63452d2bff379c780c8f63ae",
+                            "name": "L"
+                        },
+                        {
+                            "name": "M",
+                            "id": "64a5c8b7b7e1972bff8d2823"
+                        }
+                    ],
+                    "name": "Size",
+                    "active": true,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "size"
+                },
+                {
+                    "id": "6352e609798c53e28736fe08",
+                    "values": [
+                        {
+                            "name": "white",
+                            "id": "6352e617798c53e28736fe09"
+                        },
+                        {
+                            "name": "red",
+                            "id": "6352e617798c53e28736fe0a"
+                        },
+                        {
+                            "name": "blue",
+                            "id": "6352e617798c53e28736fe0b"
+                        },
+                        {
+                            "name": "green",
+                            "id": "6352e64f798c53e28736fe0d"
+                        }
+                    ],
+                    "name": "Color",
+                    "active": true,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "color"
+                },
+                {
+                    "id": "64ac4f25878c0c87031039a2",
+                    "values": [
+                        {
+                            "name": "polyester",
+                            "id": "64ac4f6d878c0c87031039a3"
+                        },
+                        {
+                            "name": "cotton",
+                            "id": "64ac4f6d878c0c87031039a4"
+                        },
+                        {
+                            "name": "wool",
+                            "id": "64ac4f6d878c0c87031039a5"
+                        }
+                    ],
+                    "name": "Material",
+                    "active": true,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "material"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "type": "physical",
+            "date_created": "2022-10-11T08:45:32.306Z",
+            "stock_status": "out_of_stock",
+            "date_updated": "2023-07-11T17:40:52.187Z",
+            "category_index": {
+                "sort": {
+                    "632c79709f25080011864d2a": 1
+                },
+                "id": [
+                    "632c79709f25080011864d2a"
+                ]
+            },
+            "prices": [],
+            "sale": false,
+            "sale_price": null,
+            "popularity": 4,
+            "review_rating": null,
+            "stock_level": 1,
+            "stock_purchasable": false,
+            "id": "63452d2c8b0b5d0013083233"
+        },
+        {
+            "name": "Street wear navy jacket",
+            "sku": "JAC02",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef73dd164fe0012a7f80a",
+                        "date_uploaded": "2022-10-06T15:41:49.438Z",
+                        "length": 959816,
+                        "md5": "540e30decbfdebb3083ac96d9b716c23",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef73dd164fe0012a7f80a/540e30decbfdebb3083ac96d9b716c23",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef76d88453b0012120e0e"
+                },
+                {
+                    "file": {
+                        "id": "633ef73e89e34300129bf23c",
+                        "date_uploaded": "2022-10-06T15:41:50.456Z",
+                        "length": 1168612,
+                        "md5": "e6c03b1778626c2c9e05a39ce91e8853",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef73e89e34300129bf23c/e6c03b1778626c2c9e05a39ce91e8853",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef76d88453b0012120e0f"
+                },
+                {
+                    "file": {
+                        "id": "633ef73ed164fe0012a7f810",
+                        "date_uploaded": "2022-10-06T15:41:50.650Z",
+                        "length": 1279036,
+                        "md5": "75b79801f20cce3c97b584fc4a39eb46",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef73ed164fe0012a7f810/75b79801f20cce3c97b584fc4a39eb46",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef76d88453b0012120e10"
+                },
+                {
+                    "file": {
+                        "id": "633ef73f89e34300129bf243",
+                        "date_uploaded": "2022-10-06T15:41:51.228Z",
+                        "length": 1477980,
+                        "md5": "de4869d402477732fe965ebfa5c0fa4d",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef73f89e34300129bf243/de4869d402477732fe965ebfa5c0fa4d",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef76d88453b0012120e11"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 40,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Street wear navy jacket. Perfect FittingOur Navy Street Wear Jacket is a stylish addition to your casual wardrobe. With its urban vibe and comfortable fit, this jacket effortlessly enhances your streetwear look. Perfect for everyday wear, it adds a touch of cool and confident style to any outfit.",
+            "tags": [
+                "jacket",
+                "navy",
+                "men"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "street-wear-navy-jacket",
+            "attributes": {
+                "material": [
+                    "polyester",
+                    "cotton"
+                ]
+            },
+            "up_sells": [
+                {
+                    "id": "633ef756a874ed7047cbf4b6",
+                    "product_id": "633ef711d164fe0012a7f7f5"
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 40,
+            "stock_tracking": true,
+            "options": [
+                {
+                    "id": "633ef74ba874ed7047cbf4b5",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef76ea874ed7047cbf4b7",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef76ea874ed7047cbf4b8",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef76ea874ed7047cbf4b9",
+                            "name": "L"
+                        },
+                        {
+                            "id": "633ef76ea874ed7047cbf4ba",
+                            "name": "XL"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                },
+                {
+                    "id": "64ac1840854e34fce1105798",
+                    "values": [
+                        {
+                            "name": "red",
+                            "id": "64ac184b854e34fce1105799"
+                        },
+                        {
+                            "name": "blue",
+                            "id": "64ac184b854e34fce110579a"
+                        },
+                        {
+                            "name": "green",
+                            "id": "64ac184b854e34fce110579b"
+                        }
+                    ],
+                    "name": "Color",
+                    "active": true,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "color"
+                },
+                {
+                    "id": "64ac36c5300c0345afa1cae6",
+                    "values": [
+                        {
+                            "name": "polyester",
+                            "id": "64ac36d8300c0345afa1cae7"
+                        },
+                        {
+                            "name": "cotton",
+                            "id": "64ac36d8300c0345afa1cae8"
+                        }
+                    ],
+                    "name": "Material",
+                    "active": true,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "material"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:42:37.663Z",
+            "stock_status": "in_stock",
+            "date_updated": "2023-07-10T16:50:44.926Z",
+            "category_index": {
+                "sort": {
+                    "632c78977a6b500012602db8": 1
+                },
+                "id": [
+                    "632c78977a6b500012602db8"
+                ]
+            },
+            "cross_sells": [],
+            "popularity": 9,
+            "stock_level": 11,
+            "stock_purchasable": false,
+            "review_rating": 3,
+            "id": "633ef76d88453b0012120e0d"
+        },
+        {
+            "name": "Lightweight windbreaker jacket",
+            "sku": "JAC01",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef6ccd164fe0012a7f7d4",
+                        "date_uploaded": "2022-10-06T15:39:57.032Z",
+                        "length": 1535536,
+                        "md5": "fa94fcef966734e26ac2a1701b2b71b9",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef6ccd164fe0012a7f7d4/fa94fcef966734e26ac2a1701b2b71b9",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef711d164fe0012a7f7f6"
+                },
+                {
+                    "file": {
+                        "id": "633ef6d1d164fe0012a7f7e5",
+                        "date_uploaded": "2022-10-06T15:40:01.832Z",
+                        "length": 3082836,
+                        "md5": "10632c6d76d7c8934ab25421e2419013",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef6d1d164fe0012a7f7e5/10632c6d76d7c8934ab25421e2419013",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef711d164fe0012a7f7f7"
+                },
+                {
+                    "file": {
+                        "id": "633ef6cdd164fe0012a7f7dc",
+                        "date_uploaded": "2022-10-06T15:39:57.287Z",
+                        "length": 1661668,
+                        "md5": "705987b75bdebc239cde547de97350a1",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef6cdd164fe0012a7f7dc/705987b75bdebc239cde547de97350a1",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef711d164fe0012a7f7f8"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 30,
+                    "sale": true,
+                    "sale_price": 25,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Stay comfortable in any weather with our Lightweight Windbreaker Jacket. Designed for practicality, it protects you from the wind without feeling heavy. Made with lightweight materials, it&#39;s perfect for everyday wear. Whether you&#39;re outdoors or on the go, this versatile jacket keeps you stylish and comfortable.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "lightweight-windbreaker-jacket",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 30,
+            "stock_tracking": true,
+            "options": [
+                {
+                    "id": "633ef6faa874ed7047cbf4b2",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef712a874ed7047cbf4b3",
+                            "name": "L"
+                        },
+                        {
+                            "id": "633ef712a874ed7047cbf4b4",
+                            "name": "XL"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 25,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:41:05.730Z",
+            "stock_status": "in_stock",
+            "date_updated": "2023-06-23T23:15:19.947Z",
+            "category_index": {
+                "sort": {
+                    "632c78977a6b500012602db8": 0
+                },
+                "id": [
+                    "632c78977a6b500012602db8"
+                ]
+            },
+            "stock_level": 3,
+            "popularity": 1,
+            "id": "633ef711d164fe0012a7f7f5"
+        },
+        {
+            "name": "Fashionable shirt for men",
+            "sku": "SHIRT02",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef665d164fe0012a7f7b9",
+                        "date_uploaded": "2022-10-06T15:38:13.832Z",
+                        "length": 5317568,
+                        "md5": "b21d80b1973f52a593aaf133e5d620bd",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef665d164fe0012a7f7b9/b21d80b1973f52a593aaf133e5d620bd",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef691b34148001210c84f"
+                },
+                {
+                    "file": {
+                        "id": "633ef65ed164fe0012a7f7a5",
+                        "date_uploaded": "2022-10-06T15:38:07.146Z",
+                        "length": 3259308,
+                        "md5": "bd44e8efa1c701ae9289339d3021ab91",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef65ed164fe0012a7f7a5/bd44e8efa1c701ae9289339d3021ab91",
+                        "width": 4460,
+                        "height": 2973
+                    },
+                    "id": "633ef691b34148001210c850"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 15,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Fashionable Men&#39;s Shirt is a versatile must-have. With its trendy design and high-quality materials, it effortlessly elevates your style. Perfect for any occasion, it showcases your impeccable fashion sense with comfort and durability.",
+            "tags": [
+                "shirt",
+                "men",
+                "fashionable"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "fashionable-shirt-for-men",
+            "attributes": {},
+            "cross_sells": [
+                {
+                    "id": "633ef677a874ed7047cbf4ae",
+                    "product_id": "633ef628d164fe0012a7f791",
+                    "discount_type": "fixed",
+                    "discount_amount": 2
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 15,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef665a874ed7047cbf4ac",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef692a874ed7047cbf4af",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef692a874ed7047cbf4b0",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef692a874ed7047cbf4b1",
+                            "name": "L"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:38:57.594Z",
+            "stock_status": null,
+            "date_updated": "2023-07-07T07:01:27.786Z",
+            "category_index": {
+                "sort": {
+                    "633ef605b34148001210c843": 1,
+                    "632c78977a6b500012602db8": 0,
+                    "632c79147a6b500012602dc0": 0,
+                    "632c79095d9d79001246983c": 0
+                },
+                "id": [
+                    "633ef605b34148001210c843",
+                    "632c78977a6b500012602db8",
+                    "632c79147a6b500012602dc0",
+                    "632c79095d9d79001246983c"
+                ]
+            },
+            "popularity": 4,
+            "up_sells": [],
+            "id": "633ef691b34148001210c84e"
+        },
+        {
+            "name": "Red and black fall flannel",
+            "sku": "Shirt01",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef5f689e34300129bf216",
+                        "date_uploaded": "2022-10-06T15:36:22.724Z",
+                        "length": 1486724,
+                        "md5": "10ffa86f850a823a0c82edc118fc5ce6",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef5f689e34300129bf216/10ffa86f850a823a0c82edc118fc5ce6",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef628d164fe0012a7f792"
+                },
+                {
+                    "file": {
+                        "id": "633ef5f9d164fe0012a7f75c",
+                        "date_uploaded": "2022-10-06T15:36:25.700Z",
+                        "length": 2534772,
+                        "md5": "431d1d9e8b41b72ca32ca257ce1c6119",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef5f9d164fe0012a7f75c/431d1d9e8b41b72ca32ca257ce1c6119",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef628d164fe0012a7f793"
+                },
+                {
+                    "file": {
+                        "id": "633ef5f6d164fe0012a7f74d",
+                        "date_uploaded": "2022-10-06T15:36:22.331Z",
+                        "length": 1421948,
+                        "md5": "7d9d2baf70957013852612068b164dc7",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef5f6d164fe0012a7f74d/7d9d2baf70957013852612068b164dc7",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef628d164fe0012a7f794"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 20,
+                    "sale": true,
+                    "sale_price": 17,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Stay cozy and fashionable this fall with our Red and Black Fall Flannel. With its classic plaid pattern and warm colors, it&#39;s perfect for cooler days. Made with soft fabric, it offers comfort and style. A must-have for your fall wardrobe.",
+            "tags": [
+                "shirt",
+                "men"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "red-and-black-fall-shirt",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 20,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef613a874ed7047cbf4a9",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef629a874ed7047cbf4aa",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef629a874ed7047cbf4ab",
+                            "name": "M"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 17,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:37:12.410Z",
+            "stock_status": null,
+            "date_updated": "2023-05-22T16:28:30.531Z",
+            "category_index": {
+                "sort": {
+                    "632c78977a6b500012602db8": 0,
+                    "632c79147a6b500012602dc0": 0
+                },
+                "id": [
+                    "632c78977a6b500012602db8",
+                    "632c79147a6b500012602dc0"
+                ]
+            },
+            "popularity": 2,
+            "id": "633ef628d164fe0012a7f791"
+        },
+        {
+            "name": "Simple t-shirt with colored edges",
+            "sku": "T02",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef54509f6fd0014cdb61d",
+                        "date_uploaded": "2022-10-06T15:33:25.909Z",
+                        "length": 3391012,
+                        "md5": "9723fe309fe17d7a77a3e60303348b2c",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef54509f6fd0014cdb61d/9723fe309fe17d7a77a3e60303348b2c",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef586d164fe0012a7f688"
+                },
+                {
+                    "file": {
+                        "id": "633ef53f09f6fd0014cdb615",
+                        "date_uploaded": "2022-10-06T15:33:19.514Z",
+                        "length": 1459100,
+                        "md5": "810c47a8978a56d8ca1e9d6829e3238f",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef53f09f6fd0014cdb615/810c47a8978a56d8ca1e9d6829e3238f",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef586d164fe0012a7f689"
+                },
+                {
+                    "file": {
+                        "id": "633ef53db34148001210c839",
+                        "date_uploaded": "2022-10-06T15:33:17.443Z",
+                        "length": 810152,
+                        "md5": "3bf27f428a00709c6554177d260cbf61",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef53db34148001210c839/3bf27f428a00709c6554177d260cbf61",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef586d164fe0012a7f68a"
+                },
+                {
+                    "file": {
+                        "id": "633ef540d164fe0012a7f601",
+                        "date_uploaded": "2022-10-06T15:33:20.337Z",
+                        "length": 1693512,
+                        "md5": "cfc85b08ece2011f16506e830d8881cf",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef540d164fe0012a7f601/cfc85b08ece2011f16506e830d8881cf",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef586d164fe0012a7f68b"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 6,
+                    "sale": true,
+                    "sale_price": 5,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Colored Edges T-Shirt is a stylish and comfortable choice. With its colored edges, it adds a pop of vibrancy to your outfit. Made from soft fabric, it&#39;s easy to wear and versatile for any occasion. Perfect for adding a touch of simplicity and color to your look.",
+            "tags": [
+                "tshirt"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "simple-t-shirt-with-colored-edges",
+            "attributes": {
+                "color": [
+                    "White",
+                    "Red"
+                ]
+            },
+            "up_sells": [
+                {
+                    "id": "633ef567a874ed7047cbf4a3",
+                    "product_id": "633ef484d164fe0012a7f5db"
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 6,
+            "stock_tracking": true,
+            "options": [
+                {
+                    "id": "633ef54ea874ed7047cbf4a1",
+                    "name": "Color",
+                    "values": [
+                        {
+                            "id": "633ef587a874ed7047cbf4a4",
+                            "name": "White"
+                        },
+                        {
+                            "id": "633ef587a874ed7047cbf4a5",
+                            "name": "Red"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "color"
+                },
+                {
+                    "id": "633ef55ea874ed7047cbf4a2",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef587a874ed7047cbf4a6",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef587a874ed7047cbf4a7",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef587a874ed7047cbf4a8",
+                            "name": "L"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                },
+                {
+                    "id": "64a4567dfd87d5532177e815",
+                    "values": [
+                        {
+                            "name": "cotton",
+                            "id": "64a4568cfd87d5532177e816"
+                        },
+                        {
+                            "name": "wool",
+                            "id": "64a4568cfd87d5532177e817"
+                        }
+                    ],
+                    "name": "Material",
+                    "active": false,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "material"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 5,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:34:30.639Z",
+            "stock_status": "in_stock",
+            "date_updated": "2023-07-04T17:36:11.584Z",
+            "category_index": {
+                "sort": {
+                    "632c7988f79cf20012c3e5fa": 2
+                },
+                "id": [
+                    "632c7988f79cf20012c3e5fa"
+                ]
+            },
+            "popularity": 2,
+            "cross_sells": [],
+            "review_rating": null,
+            "stock_level": 58,
+            "dimensions": false,
+            "shipment_dimensions": null,
+            "shipment_package_quantity": null,
+            "shipment_prices": [],
+            "shipment_weight": null,
+            "stock_purchasable": false,
+            "id": "633ef586d164fe0012a7f687"
+        },
+        {
+            "name": "Black tank top",
+            "sku": "TOP01",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef4cf88453b0012120dfe",
+                        "date_uploaded": "2022-10-06T15:31:27.614Z",
+                        "length": 1533892,
+                        "md5": "f3f092a7613a552c14bd52b87ac06bd7",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef4cf88453b0012120dfe/f3f092a7613a552c14bd52b87ac06bd7",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef4f189e34300129bf1e2"
+                },
+                {
+                    "file": {
+                        "id": "633ef4ceb34148001210c82c",
+                        "date_uploaded": "2022-10-06T15:31:26.709Z",
+                        "length": 1122432,
+                        "md5": "67bc54b776f078f37b70cd6303abf1f6",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef4ceb34148001210c82c/67bc54b776f078f37b70cd6303abf1f6",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef4f189e34300129bf1e3"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 7,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Black Tank Top is a must-have staple for women. Its classic black color goes well with any outfit, and its comfortable fabric offers a flattering fit. Perfect for layering or wearing on its own, this tank top is a versatile and timeless choice for everyday style.",
+            "tags": [
+                "top",
+                "tank",
+                "black"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "black-tank-top",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 7,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef4dba874ed7047cbf49f",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef4f2a874ed7047cbf4a0",
+                            "name": "M"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:32:01.331Z",
+            "stock_status": null,
+            "date_updated": "2023-06-27T15:11:35.767Z",
+            "category_index": {
+                "sort": {
+                    "632cbd803c910400128464e1": 2
+                },
+                "id": [
+                    "632cbd803c910400128464e1"
+                ]
+            },
+            "popularity": 1,
+            "id": "633ef4f189e34300129bf1e1"
+        },
+        {
+            "name": "Sleeve detail white t-shirt",
+            "sku": "T01",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef465d164fe0012a7f5ca",
+                        "date_uploaded": "2022-10-06T15:29:41.421Z",
+                        "length": 1623276,
+                        "md5": "a7c7285c4d75c6e44a259d78631de747",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef465d164fe0012a7f5ca/a7c7285c4d75c6e44a259d78631de747",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef484d164fe0012a7f5dc"
+                },
+                {
+                    "file": {
+                        "id": "633ef46889e34300129bf1b9",
+                        "date_uploaded": "2022-10-06T15:29:44.742Z",
+                        "length": 2525388,
+                        "md5": "34827daffbf45d3b1917c050245b6b27",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef46889e34300129bf1b9/34827daffbf45d3b1917c050245b6b27",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef484d164fe0012a7f5dd"
+                },
+                {
+                    "file": {
+                        "id": "633ef466d164fe0012a7f5d3",
+                        "date_uploaded": "2022-10-06T15:29:42.430Z",
+                        "length": 1776636,
+                        "md5": "9447352bf323ce3b406fa5dae97b6ee7",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef466d164fe0012a7f5d3/9447352bf323ce3b406fa5dae97b6ee7",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef484d164fe0012a7f5de"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 10,
+                    "sale": true,
+                    "sale_price": 8,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Sleeve Detail White T-Shirt is a stylish and versatile addition to your wardrobe. With its unique sleeve design, this white tee adds a touch of flair to your outfit. Made from comfortable fabric, it&#39;s perfect for everyday wear. Whether you&#39;re dressing up or keeping it casual, this t-shirt effortlessly elevates your style.",
+            "tags": [
+                "tshirt",
+                "white"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "sleeve-detail-white-t-shirt",
+            "attributes": {},
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 10,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef473a874ed7047cbf49b",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef485a874ed7047cbf49c",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef485a874ed7047cbf49d",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef485a874ed7047cbf49e",
+                            "name": "L"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 8,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:30:12.633Z",
+            "stock_status": null,
+            "date_updated": "2023-05-22T16:31:17.288Z",
+            "category_index": {
+                "sort": {
+                    "632c7988f79cf20012c3e5fa": 1,
+                    "632cbd803c910400128464e1": 1
+                },
+                "id": [
+                    "632c7988f79cf20012c3e5fa",
+                    "632cbd803c910400128464e1"
+                ]
+            },
+            "popularity": 3,
+            "id": "633ef484d164fe0012a7f5db"
+        },
+        {
+            "name": "Red Cocktail Dress Off Shoulder",
+            "sku": "Dress005",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef3b7d164fe0012a7f5b9",
+                        "date_uploaded": "2022-10-06T15:26:47.237Z",
+                        "length": 630900,
+                        "md5": "6510150f0064ebdba300f71405a9b433",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef3b7d164fe0012a7f5b9/6510150f0064ebdba300f71405a9b433",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef408b34148001210c80c"
+                },
+                {
+                    "file": {
+                        "id": "633ef3b688453b0012120ddc",
+                        "date_uploaded": "2022-10-06T15:26:46.788Z",
+                        "length": 630900,
+                        "md5": "6510150f0064ebdba300f71405a9b433",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef3b688453b0012120ddc/6510150f0064ebdba300f71405a9b433",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef408b34148001210c80d"
+                },
+                {
+                    "file": {
+                        "id": "633ef3b8b34148001210c805",
+                        "date_uploaded": "2022-10-06T15:26:48.500Z",
+                        "length": 920156,
+                        "md5": "6993c16587cb8b6a7999b4b756eb6de4",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef3b8b34148001210c805/6993c16587cb8b6a7999b4b756eb6de4",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef408b34148001210c80e"
+                },
+                {
+                    "file": {
+                        "id": "633ef3bb88453b0012120de1",
+                        "date_uploaded": "2022-10-06T15:26:51.518Z",
+                        "length": 1844396,
+                        "md5": "78f27d86336ed046d5d34ef89ac856e8",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef3bb88453b0012120de1/78f27d86336ed046d5d34ef89ac856e8",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef408b34148001210c80f"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 30,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Make a statement with our Red Off Shoulder Cocktail Dress. This stunning dress features a flattering off-shoulder design and a vibrant red color. Perfect for cocktail parties and special events, it ensures a comfortable and confident fit that will turn heads wherever you go.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "red-cocktail-dress-off-shoulder",
+            "attributes": {},
+            "up_sells": [
+                {
+                    "id": "633ef3d5a874ed7047cbf498",
+                    "product_id": "633eef08b34148001210c719"
+                },
+                {
+                    "id": "633ef3dba874ed7047cbf499",
+                    "product_id": "633ef373b34148001210c7f4"
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 30,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef3cea874ed7047cbf497",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef409a874ed7047cbf49a",
+                            "name": "M"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:28:08.800Z",
+            "stock_status": null,
+            "date_updated": "2023-06-30T13:35:29.135Z",
+            "category_index": {
+                "sort": {
+                    "633eed2689e34300129bf156": 4
+                },
+                "id": [
+                    "633eed2689e34300129bf156"
+                ]
+            },
+            "cross_sells": [],
+            "review_rating": null,
+            "id": "633ef408b34148001210c80b"
+        },
+        {
+            "name": "Black Night Cocktail Dress",
+            "sku": "Dress004",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef30ab34148001210c7ef",
+                        "date_uploaded": "2022-10-06T15:23:54.601Z",
+                        "length": 979920,
+                        "md5": "6df52e0d7fa5fd8624455990979cce5f",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef30ab34148001210c7ef/6df52e0d7fa5fd8624455990979cce5f",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef373b34148001210c7f5"
+                },
+                {
+                    "file": {
+                        "id": "633ef30a88453b0012120d95",
+                        "date_uploaded": "2022-10-06T15:23:54.462Z",
+                        "length": 1063396,
+                        "md5": "aba14489847d782f410e47ac5fe802b7",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef30a88453b0012120d95/aba14489847d782f410e47ac5fe802b7",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef373b34148001210c7f6"
+                },
+                {
+                    "file": {
+                        "id": "633ef30ad164fe0012a7f5a8",
+                        "date_uploaded": "2022-10-06T15:23:54.546Z",
+                        "length": 966568,
+                        "md5": "5845581819924176811d98b0bcc23675",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef30ad164fe0012a7f5a8/5845581819924176811d98b0bcc23675",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef373b34148001210c7f7"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 35,
+                    "sale": true,
+                    "sale_price": 30,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Turn heads in our Black Night Cocktail Dress. This sleek and elegant dress is perfect for evening events. With its stunning black color and stylish silhouette, it&#39;s designed to make a statement. Made with high-quality fabric, it offers both comfort and style. Whether it&#39;s a cocktail party or a special night out, this dress ensures a captivating and memorable look.",
+            "tags": [
+                "dress",
+                "night",
+                "cocktail"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "black-night-cocktail-dress",
+            "attributes": {},
+            "up_sells": [
+                {
+                    "id": "633ef338a874ed7047cbf491",
+                    "product_id": "633eef08b34148001210c719"
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 35,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef328a874ed7047cbf490",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef374a874ed7047cbf492",
+                            "name": "XS"
+                        },
+                        {
+                            "id": "633ef374a874ed7047cbf493",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef374a874ed7047cbf494",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef374a874ed7047cbf495",
+                            "name": "L"
+                        },
+                        {
+                            "id": "633ef374a874ed7047cbf496",
+                            "name": "XL"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 30,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:25:39.997Z",
+            "stock_status": null,
+            "date_updated": "2023-05-22T16:32:23.205Z",
+            "category_index": {
+                "sort": {
+                    "633eed2689e34300129bf156": 3
+                },
+                "id": [
+                    "633eed2689e34300129bf156"
+                ]
+            },
+            "cross_sells": [],
+            "id": "633ef373b34148001210c7f4"
+        },
+        {
+            "name": "Ruffled White Summer Dress",
+            "sku": "Dress003",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633ef0c689e34300129bf179",
+                        "date_uploaded": "2022-10-06T15:14:14.061Z",
+                        "length": 631128,
+                        "md5": "e12b510c4e84da30f4099805cbb1af66",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef0c689e34300129bf179/e12b510c4e84da30f4099805cbb1af66",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef13089e34300129bf17e"
+                },
+                {
+                    "file": {
+                        "id": "633ef0c6d164fe0012a7f54e",
+                        "date_uploaded": "2022-10-06T15:14:14.088Z",
+                        "length": 632160,
+                        "md5": "7cffb59d6dc4f28fe281b1e6a7925ba0",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef0c6d164fe0012a7f54e/7cffb59d6dc4f28fe281b1e6a7925ba0",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef13089e34300129bf17f"
+                },
+                {
+                    "file": {
+                        "id": "633ef0c5d164fe0012a7f54a",
+                        "date_uploaded": "2022-10-06T15:14:13.268Z",
+                        "length": 459656,
+                        "md5": "42f6538ba07401eb5afaddea45daba49",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633ef0c5d164fe0012a7f54a/42f6538ba07401eb5afaddea45daba49",
+                        "width": 2500,
+                        "height": 1667
+                    },
+                    "id": "633ef13089e34300129bf180"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 15,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Ruffled White Summer Dress is a charming choice for the sunny season. With playful ruffles and a crisp white color, it adds a feminine touch to your look. Made from lightweight and breathable fabric, it keeps you comfortable on warm days. Whether you&#39;re at the beach or a garden party, this dress effortlessly showcases your effortless summer style.",
+            "tags": [
+                "dress",
+                "summer"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "ruffled-white-summer-dress",
+            "attributes": {},
+            "up_sells": [
+                {
+                    "id": "633ef0f0a874ed7047cbf48b",
+                    "product_id": "633ef04488453b0012120d7f"
+                },
+                {
+                    "id": "633ef0f7a874ed7047cbf48c",
+                    "product_id": "633eef08b34148001210c719"
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 15,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef0dda874ed7047cbf48a",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef130a874ed7047cbf48d",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef130a874ed7047cbf48e",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef130a874ed7047cbf48f",
+                            "name": "L"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:16:00.012Z",
+            "stock_status": null,
+            "date_updated": "2023-05-22T16:32:46.525Z",
+            "category_index": {
+                "sort": {
+                    "633eed2689e34300129bf156": 2
+                },
+                "id": [
+                    "633eed2689e34300129bf156"
+                ]
+            },
+            "cross_sells": [],
+            "id": "633ef12f89e34300129bf17d"
+        },
+        {
+            "name": "Floral Summer Dress",
+            "sku": "Dress002",
+            "active": false,
+            "images": [
+                {
+                    "file": {
+                        "id": "633eefdbd164fe0012a7f52f",
+                        "date_uploaded": "2022-10-06T15:10:20.137Z",
+                        "length": 1576096,
+                        "md5": "1e20b7459baebd9d7831e2105efe64db",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633eefdbd164fe0012a7f52f/1e20b7459baebd9d7831e2105efe64db",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef04488453b0012120d80"
+                },
+                {
+                    "file": {
+                        "id": "633eefdb09f6fd0014cdb5d5",
+                        "date_uploaded": "2022-10-06T15:10:19.609Z",
+                        "length": 1511696,
+                        "md5": "a4a84c2635f3e6c3da2782f66c5ca4b1",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633eefdb09f6fd0014cdb5d5/a4a84c2635f3e6c3da2782f66c5ca4b1",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633ef04488453b0012120d81"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 15,
+                    "sale": false,
+                    "sale_price": null,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Embrace the summer vibes with our Floral Summer Dress. Featuring a charming floral print and lightweight fabric, it&#39;s perfect for sunny days. With its flattering silhouette, this dress keeps you comfortable and stylish for any occasion, whether it&#39;s a beach stroll or a garden party.",
+            "tags": [
+                "dress",
+                "flowers",
+                "summer"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "floral-summer-dress",
+            "attributes": {},
+            "up_sells": [
+                {
+                    "id": "633ef013a874ed7047cbf486",
+                    "product_id": "633eef08b34148001210c719"
+                }
+            ],
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 15,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633ef003a874ed7047cbf485",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633ef044a874ed7047cbf487",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633ef044a874ed7047cbf488",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633ef044a874ed7047cbf489",
+                            "name": "L"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": false,
+            "sale_price": null,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:12:04.177Z",
+            "stock_status": null,
+            "date_updated": "2023-06-15T13:57:20.293Z",
+            "category_index": {
+                "sort": {
+                    "633eed2689e34300129bf156": 1
+                },
+                "id": [
+                    "633eed2689e34300129bf156"
+                ]
+            },
+            "cross_sells": [],
+            "popularity": 1,
+            "id": "633ef04488453b0012120d7f"
+        },
+        {
+            "name": "Off Shoulder Green Dress",
+            "sku": "Dress01",
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "633eee8f09f6fd0014cdb5c0",
+                        "date_uploaded": "2022-10-06T15:04:47.775Z",
+                        "length": 1072132,
+                        "md5": "318401735cc5acf08dc04070548d1b6b",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633eee8f09f6fd0014cdb5c0/318401735cc5acf08dc04070548d1b6b",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633eef08b34148001210c71a"
+                },
+                {
+                    "file": {
+                        "id": "633eee8f09f6fd0014cdb5ba",
+                        "date_uploaded": "2022-10-06T15:04:47.315Z",
+                        "length": 903960,
+                        "md5": "fa47374be08a30133b204d578b0dfc7d",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633eee8f09f6fd0014cdb5ba/fa47374be08a30133b204d578b0dfc7d",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633eef08b34148001210c71b"
+                },
+                {
+                    "file": {
+                        "id": "633eee9789e34300129bf160",
+                        "date_uploaded": "2022-10-06T15:04:56.100Z",
+                        "length": 3518612,
+                        "md5": "b989bb8269ee3b4f78f661a325689261",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/633eee9789e34300129bf160/b989bb8269ee3b4f78f661a325689261",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "633eef08b34148001210c71c"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 25,
+                    "sale": true,
+                    "sale_price": 20,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Elevate your style with our Off Shoulder Green Dress. This elegant dress features a flattering off-shoulder neckline and vibrant green color, making it a versatile choice for any occasion. Comfortable and fashionable, it&#39;s perfect for showcasing your unique sense of style.",
+            "tags": [
+                "dress",
+                "summer",
+                "offshoulder"
+            ],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "off-shoulder-green-dress",
+            "attributes": {
+                "size": [
+                    "XS",
+                    "S",
+                    "M",
+                    "L",
+                    "XL",
+                    "XXL"
+                ]
+            },
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 25,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "633eeed8a874ed7047cbf47e",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "633eef09a874ed7047cbf47f",
+                            "name": "XS"
+                        },
+                        {
+                            "id": "633eef09a874ed7047cbf480",
+                            "name": "S"
+                        },
+                        {
+                            "id": "633eef09a874ed7047cbf481",
+                            "name": "M"
+                        },
+                        {
+                            "id": "633eef09a874ed7047cbf482",
+                            "name": "L"
+                        },
+                        {
+                            "id": "633eef09a874ed7047cbf483",
+                            "name": "XL"
+                        },
+                        {
+                            "id": "633eef09a874ed7047cbf484",
+                            "name": "XXL"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                }
+            ],
+            "additional_information": null,
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 20,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-10-06T15:06:48.378Z",
+            "stock_status": null,
+            "date_updated": "2023-05-22T16:33:21.952Z",
+            "category_index": {
+                "sort": {
+                    "633eed2689e34300129bf156": 0
+                },
+                "id": [
+                    "633eed2689e34300129bf156"
+                ]
+            },
+            "popularity": 3,
+            "id": "633eef08b34148001210c719"
+        },
+        {
+            "name": "Black t-shirt",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "632c796f65e9d3001315c1ef",
+                        "date_uploaded": "2022-09-22T15:04:15.439Z",
+                        "length": 1997496,
+                        "md5": "d8e7caef8618826b82ff9949f7558b68",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/632c796f65e9d3001315c1ef/d8e7caef8618826b82ff9949f7558b68",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "632c7a0c4a19e5001236c64d"
+                },
+                {
+                    "file": {
+                        "id": "632c796c4a19e5001236c5f7",
+                        "date_uploaded": "2022-09-22T15:04:12.918Z",
+                        "length": 1122432,
+                        "md5": "67bc54b776f078f37b70cd6303abf1f6",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/632c796c4a19e5001236c5f7/67bc54b776f078f37b70cd6303abf1f6",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "632c7a0c4a19e5001236c64e"
+                },
+                {
+                    "file": {
+                        "id": "632c796d7a6b500012602dc4",
+                        "date_uploaded": "2022-09-22T15:04:14.238Z",
+                        "length": 1533892,
+                        "md5": "f3f092a7613a552c14bd52b87ac06bd7",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/632c796d7a6b500012602dc4/f3f092a7613a552c14bd52b87ac06bd7",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "632c7a0c4a19e5001236c64f"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 8,
+                    "sale": true,
+                    "sale_price": 5,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Women&#39;s Black T-Shirt is a versatile wardrobe staple. Designed for both style and comfort, this classic black tee offers a flattering fit and a soft, breathable feel. Whether you dress it up or down, it effortlessly adds a touch of chic simplicity to any outfit.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "black-t-shirt",
+            "attributes": {
+                "material": [
+                    "Cotton",
+                    "Leather",
+                    "Wool"
+                ],
+                "colors": [
+                    "White",
+                    "Black",
+                    "Red"
+                ],
+                "color": [
+                    "White",
+                    "Black",
+                    "Red"
+                ]
+            },
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 8,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "632c79a8d74efa23f7706e65",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "632c7a0bd74efa23f7706e68",
+                            "name": "S"
+                        },
+                        {
+                            "id": "632c7a0bd74efa23f7706e69",
+                            "name": "M"
+                        },
+                        {
+                            "id": "632c7a0bd74efa23f7706e6a",
+                            "name": "L"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                },
+                {
+                    "id": "632c79b3d74efa23f7706e66",
+                    "values": [
+                        {
+                            "id": "632c7a0bd74efa23f7706e6b",
+                            "name": "White"
+                        },
+                        {
+                            "id": "632c7a0bd74efa23f7706e6c",
+                            "name": "Black"
+                        },
+                        {
+                            "id": "632c7a0bd74efa23f7706e6d",
+                            "name": "Red"
+                        }
+                    ],
+                    "name": "Color",
+                    "active": true,
+                    "input_type": "select",
+                    "variant": true,
+                    "description": null,
+                    "required": true,
+                    "attribute_id": "color"
+                },
+                {
+                    "id": "632c79bfd74efa23f7706e67",
+                    "name": "Material",
+                    "values": [
+                        {
+                            "id": "632c7a0bd74efa23f7706e6e",
+                            "name": "Cotton"
+                        },
+                        {
+                            "id": "632c7a0bd74efa23f7706e6f",
+                            "name": "Leather"
+                        },
+                        {
+                            "id": "632c7a0bd74efa23f7706e70",
+                            "name": "Wool"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "material"
+                }
+            ],
+            "currency": "USD",
+            "sale": true,
+            "sale_price": 5,
+            "prices": [],
+            "type": "physical",
+            "date_created": "2022-09-22T15:06:52.062Z",
+            "stock_status": null,
+            "date_updated": "2023-05-22T16:34:45.113Z",
+            "category_index": {
+                "sort": {
+                    "632c7988f79cf20012c3e5fa": 0
+                },
+                "id": [
+                    "632c7988f79cf20012c3e5fa"
+                ]
+            },
+            "additional_information": null,
+            "id": "632c7a0b4a19e5001236c64c"
+        },
+        {
+            "name": "Light-blue Blazer",
+            "sku": null,
+            "active": true,
+            "images": [
+                {
+                    "file": {
+                        "id": "632c787f5d9d790012469829",
+                        "date_uploaded": "2022-09-22T15:00:15.649Z",
+                        "length": 3320524,
+                        "md5": "0cb8364d78b58bf02a3340c191c88491",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/632c787f5d9d790012469829/0cb8364d78b58bf02a3340c191c88491",
+                        "width": 2973,
+                        "height": 4460
+                    },
+                    "id": "632c78e29f25080011864d0f"
+                },
+                {
+                    "file": {
+                        "id": "632c787df79cf20012c3e5d5",
+                        "date_uploaded": "2022-09-22T15:00:14.496Z",
+                        "length": 1444144,
+                        "md5": "3a81ec3fa0897d8896795e76d4acba2f",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/632c787df79cf20012c3e5d5/3a81ec3fa0897d8896795e76d4acba2f",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "632c78e29f25080011864d10"
+                },
+                {
+                    "file": {
+                        "id": "632c787ef79cf20012c3e5dd",
+                        "date_uploaded": "2022-09-22T15:00:14.613Z",
+                        "length": 2404656,
+                        "md5": "424016b367f0455c2a3acf573903962d",
+                        "filename": null,
+                        "content_type": "image/jpeg",
+                        "metadata": null,
+                        "url": "https://cdn.schema.io/square-one/632c787ef79cf20012c3e5dd/424016b367f0455c2a3acf573903962d",
+                        "width": 4460,
+                        "height": 2974
+                    },
+                    "id": "632c78e29f25080011864d11"
+                }
+            ],
+            "purchase_options": {
+                "standard": {
+                    "active": true,
+                    "price": 15,
+                    "sale": true,
+                    "sale_price": 10,
+                    "prices": []
+                }
+            },
+            "variable": true,
+            "description": "Our Men&#39;s Blue Blazer is a stylish and reliable choice for any occasion. Made with quality materials, this classic blazer adds a touch of sophistication to your outfit effortlessly.",
+            "tags": [],
+            "meta_title": null,
+            "meta_description": null,
+            "slug": "light-blue-blazer",
+            "attributes": {
+                "size": [
+                    "L",
+                    "M",
+                    "S"
+                ],
+                "color": [
+                    "White",
+                    "Light-blue",
+                    "Blue"
+                ]
+            },
+            "delivery": "shipment",
+            "bundle": null,
+            "price": 15,
+            "stock_tracking": false,
+            "options": [
+                {
+                    "id": "632c78acd74efa23f7706e5d",
+                    "name": "Size",
+                    "values": [
+                        {
+                            "id": "632c78e1d74efa23f7706e5f",
+                            "name": "L"
+                        },
+                        {
+                            "id": "632c78e1d74efa23f7706e60",
+                            "name": "M"
+                        },
+                        {
+                            "id": "632c78e1d74efa23f7706e61",
+                            "name": "S"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "size"
+                },
+                {
+                    "id": "632c78b1d74efa23f7706e5e",
+                    "name": "Color",
+                    "values": [
+                        {
+                            "id": "632c78e1d74efa23f7706e62",
+                            "name": "White"
+                        },
+                        {
+                            "id": "632c78e1d74efa23f7706e63",
+                            "name": "Light-blue"
+                        },
+                        {
+                            "id": "632c78e1d74efa23f7706e64",
+                            "name": "Blue"
+                        }
+                    ],
+                    "variant": true,
+                    "input_type": "select",
+                    "required": true,
+                    "active": true,
+                    "attribute_id": "color"
+                }
+            ],
+            "currency": "USD",
+            "type": "physical",
+            "date_created": "2022-09-22T15:01:54.177Z",
+            "stock_status": null,
+            "date_updated": "2023-06-28T14:38:00.464Z",
+            "category_index": {
+                "sort": {
+                    "632c79095d9d79001246983c": 0,
+                    "632c78977a6b500012602db8": 0,
+                    "633ef6e8d164fe0012a7f7f2": 0
+                },
+                "id": [
+                    "632c79095d9d79001246983c",
+                    "632c78977a6b500012602db8",
+                    "633ef6e8d164fe0012a7f7f2"
+                ]
+            },
+            "prices": [],
+            "sale": true,
+            "sale_price": 10,
+            "additional_information": null,
+            "review_rating": null,
+            "id": "632c78e29f25080011864d0e"
+        }
+    ]
+}
