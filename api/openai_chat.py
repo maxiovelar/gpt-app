@@ -27,7 +27,7 @@ def query_chat(query):
     prompt_template = """
     #You are a shopping assistant. Use the following pieces of context to answer the question at the end. Take your time to think and analyze your answer. Just answer the user question if is related with products, if you don't know the answer, just say that you don't know, don't try to make up an answer.
     
-    #Return a conversational answer about the question in a 'text' key.
+    #Return a conversational answer about the question without any id in a 'text' key.
     #Return an array with product id's in a 'products' key just if you found products for the user question.
     
     #Don't return duplicated products.
