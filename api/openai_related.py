@@ -35,7 +35,7 @@ def query_related(query):
     # Don't return duplicated products.
     # Don't return the product provided in the final result.
     # Don't return an object.
-    # Return a minimum of 3 products.
+    # Return a maximum of 3 products.
 
     {context}
 
