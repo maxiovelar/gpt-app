@@ -62,7 +62,7 @@ const Product = async ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
       <h3 className="text-xl mb-5">Related products:</h3>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-5 max-w-6xl">
         {filteredObjects.map((related_product) => {
           return (
             <ProductCard product={related_product} key={related_product.id} />

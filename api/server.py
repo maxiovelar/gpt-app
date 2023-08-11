@@ -1,9 +1,9 @@
 import time
 
 from fastapi import FastAPI, Request
-from api.openai_config import revalidate
-from api.openai_related import query_related
-from api.openai_chat import query_chat, memory
+from openai_config import revalidate
+from openai_related import query_related
+from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
 from api.pinecone_db import delete_index
 
@@ -12,7 +12,15 @@ app = FastAPI()
 # ################################################################################
 # # CORS (Cross-Origin Resource Sharing)
 # ################################################################################
-origins = ['*']
+origins = [
+    "http://localhost",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "http://localhost:3002",
+    "https://gpt-app-commit.vercel.app"
+]
 
 app.add_middleware(
     CORSMiddleware,

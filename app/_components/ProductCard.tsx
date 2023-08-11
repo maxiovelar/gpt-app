@@ -13,14 +13,13 @@ const ProductCard = ({ product }) => {
     <Link href={`/products/${product.slug}`} key={product.id}>
       <div
         id="card-container"
-        className="h-[650px] bg-[#1ad197] rounded-lg duration-200 cursor-pointer overflow-hidden shadow-lg text-white hover:bg-white hover:text-[#1ad197] hover:border hover:border-[#1ad197] hover:shadow-none"
+        className="h-[640px] bg-[#1ad197] rounded-lg duration-200 cursor-pointer overflow-hidden shadow-lg text-white hover:bg-white hover:text-[#1ad197] hover:shadow-xl"
       >
-        <div className="h-80 w-full relative">
+        <div className="h-80 w-full relative overflow-hidden">
           <Image
             src={imageUrl}
             alt={product.name}
             fill
-            className="pb-3 mb-3"
             style={{ objectFit: "cover" }}
           />
         </div>
