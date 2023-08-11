@@ -31,3 +31,7 @@
 .fade-up {
   animation: fade-up 0.5s ease-out;
 }
+
+#card-container:hover > image {
+  transform: scale(1.1);
+}

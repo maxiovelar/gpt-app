@@ -18,12 +18,12 @@ export default function RootLayout({
     <html lang="en">
       <body className="m-10 bg-white bg-opacity-70">
         <div className="flex space-x-5">
-          <div className="flex flex-col border-r border-[#1ad197] pr-5 w-96">
+          <div className="flex flex-col border-r border-[#1ad197] pr-5">
             <h3 className="text-3xl mb-5 text-[#1ad197] font-bold flex flex-col">
               <span>Welcome to the</span>
               <span>SquareOne AI Project</span>
             </h3>
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 w-80">
               <Link className="text-md opacity-70 underline" href="/">
                 Assistant and Product search
               </Link>

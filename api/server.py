@@ -12,15 +12,7 @@ app = FastAPI()
 # ################################################################################
 # # CORS (Cross-Origin Resource Sharing)
 # ################################################################################
-origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://localhost:3000",
-    "http://localhost:3001",
-    "http://localhost:3002",
-    "https://gpt-app-commit.vercel.app"
-]
+origins = ['*']
 
 app.add_middleware(
     CORSMiddleware,
