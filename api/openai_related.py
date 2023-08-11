@@ -1,4 +1,4 @@
-from pinecone_db import get_db_instance
+from api.pinecone_db import get_db_instance
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI

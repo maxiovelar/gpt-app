@@ -11,7 +11,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import JSONLoader
 from langchain.prompts import PromptTemplate
-from pinecone_db import get_db_embeddings
+from api.pinecone_db import get_db_embeddings
 
 DATABASE_PATH = './db/'
 
