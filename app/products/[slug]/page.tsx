@@ -30,11 +30,11 @@ const Product = async ({ params }: { params: { slug: string } }) => {
   const related_products_ids = await getRelatedProducts(product);
   console.log(related_products_ids);
 
-  const filteredObjects = await productsData.filter((obj) =>
-    related_products_ids.result.includes(obj.id)
-  );
+  // const filteredObjects = await productsData.filter((obj) =>
+  //   related_products_ids.result.includes(obj.id)
+  // );
 
-  console.log(filteredObjects);
+  // console.log(filteredObjects);
 
   const imageUrl = product.image_url;
 
@@ -63,11 +63,11 @@ const Product = async ({ params }: { params: { slug: string } }) => {
       </div>
       <h3 className="text-xl mb-5">Related products:</h3>
       <div className="grid grid-cols-3 gap-5 max-w-6xl">
-        {filteredObjects.map((related_product) => {
+        {/* {filteredObjects.map((related_product) => {
           return (
             <ProductCard product={related_product} key={related_product.id} />
           );
-        })}
+        })} */}
       </div>
     </div>
   );

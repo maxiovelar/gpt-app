@@ -28,11 +28,13 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)    
+)
 
 # ################################################################################
 # # TEST
 # ################################################################################
+
+
 @app.get("/api")
 def handle_test():
     return {"status": "ok",
@@ -42,6 +44,7 @@ def handle_test():
 # # Revalidate DB
 # ################################################################################
 
+
 @app.get("/api/revalidate")
 def handle_revalidate():
     start_time = time.time()
@@ -50,7 +53,7 @@ def handle_revalidate():
 
     end_time = time.time()
     elapsed_time = end_time - start_time
-    
+
     print({
         "status": "Revalidated",
         "duration": f"{elapsed_time:.4f} seconds"
@@ -60,10 +63,11 @@ def handle_revalidate():
         "status": "Revalidated",
         "duration": f"{elapsed_time:.4f} seconds"
     }
-      
+
 # ################################################################################
 # # Delete pinecone index - use just when is needed
 # ################################################################################
+
 
 @app.delete("/api/pinecone-index")
 def handle_pinecone_index_delete():
@@ -72,10 +76,11 @@ def handle_pinecone_index_delete():
         "status": "ok",
         "message": "Pinecone index was deleted, please revalidate the DB before using the app again",
     }
-    
+
 # ################################################################################
 # # Chatbot Routes
 # ################################################################################
+
 
 @app.post("/api/chat/query")
 async def chatbot_handle_query(request: Request):
@@ -94,16 +99,18 @@ async def chatbot_handle_query(request: Request):
         "result": result,
         "duration": f"{elapsed_time:.4f} seconds"
     }
-    
+
+
 @app.delete("/api/chat/query")
 def handle_memory_delete():
     memory.clear()
     print("----- Chatbot memory cleared -----")
-    
+
 # ################################################################################
 # # Related Products Routes
 # ################################################################################
-    
+
+
 @app.post("/api/related")
 async def handle_query(request: Request):
     start_time = time.time()
@@ -121,4 +128,3 @@ async def handle_query(request: Request):
         "result": result,
         "duration": f"{elapsed_time:.4f} seconds"
     }
-    
