@@ -1,10 +1,10 @@
 import time
 
 from fastapi import FastAPI, Request
-from openai_config import revalidate
-from openai_related import query_related
-from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
+from api.openai_config import revalidate
+from api.openai_related import query_related
+from api.openai_chat import query_chat, memory
 from api.pinecone_db import delete_index
 
 app = FastAPI()
