@@ -7,7 +7,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
-from pinecone_db import get_db_instance
+from api.pinecone_db import get_db_instance
 
 from langchain.memory import ConversationBufferMemory
 

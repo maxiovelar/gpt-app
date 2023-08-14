@@ -7,7 +7,7 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import JSONLoader
-from pinecone_db import get_db_embeddings
+from api.pinecone_db import get_db_embeddings
 
 # DATABASE_PATH = './db/'
 tmp_dir = tempfile.gettempdir()

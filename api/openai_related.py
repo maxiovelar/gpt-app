@@ -2,7 +2,7 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 import json
 import os
-from pinecone_db import get_db_instance
+from api.pinecone_db import get_db_instance
 from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
