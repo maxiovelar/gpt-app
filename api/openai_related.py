@@ -17,23 +17,8 @@ import openai
 ################################################################################
 def query_related(query):
 
-
     db = get_db_instance()
     
-
-    # prompt_template = """
-    # You will receive a object containing a product name delimited with <>. Your task is to use the following pieces of context to find a maximum of three products that are related to the product delimited with <>.
-    # Return an array with the id of each related product.
-    # If you can not find any related products, just return an empty array.
-    # Don't return duplicated products.
-    # Don't return the product provided in the final result.
-    # Don't return an object.
-
-    # {context}
-
-    # Product: <{question}>
-    # Answer in JSON format:"""
-
     prompt_template = """
     You will receive a product name delimited with <>. Your task is to use the following pieces of context to find a maximum of three products that are related to the product delimited with <>. Once found, return an array with the id of each of those products.
     # If you can not find any related products, just return an empty array.
@@ -62,15 +47,4 @@ def query_related(query):
 
     res = qa.run(query)
     
-    
-    # chat = openai.ChatCompletion.create(
-    #         model="gpt-3.5-turbo",
-    #         messages=[
-    #             {"role": "system", "content": "You are a helpful assistant."},
-    #             {"role": "assistant", "content": "Return an array of only product names similar to the given one"},
-    #             {"role": "user", "content": query},
-    #         ]
-    # )
-    
-
-    # return print(chat.choices[0].message.content)
+    return json.loads(res)

@@ -68,6 +68,7 @@ const Product = async ({ params }: { params: { slug: string } }) => {
             <ProductCard product={related_product} key={related_product.id} />
           );
         })} */}
+        {JSON.stringify(related_products_ids)}
       </div>
     </div>
   );
