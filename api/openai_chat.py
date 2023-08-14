@@ -3,9 +3,7 @@ import os
 
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
-import json
 from langchain.chat_models import ChatOpenAI
-from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain

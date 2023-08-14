@@ -1,16 +1,12 @@
 import os
 import shutil
-import time
 import json
 import requests
 import tempfile
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
-from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.chains import RetrievalQA
 from langchain.document_loaders import JSONLoader
-from langchain.prompts import PromptTemplate
 from pinecone_db import get_db_embeddings
 
 # DATABASE_PATH = './db/'
