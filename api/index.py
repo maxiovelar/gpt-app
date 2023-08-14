@@ -5,7 +5,7 @@ from openai_config import revalidate
 from openai_related import query_related
 from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
-from pinecone_db import delete_index
+from api.pinecone_db import delete_index
 
 app = FastAPI()
 
