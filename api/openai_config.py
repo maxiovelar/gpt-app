@@ -11,7 +11,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
 from langchain.document_loaders import JSONLoader
 from langchain.prompts import PromptTemplate
-from api.pinecone_db import get_db_embeddings
+from pinecone_db import get_db_embeddings
 
 DATABASE_PATH = './db/'
 
@@ -20,52 +20,54 @@ DATABASE_PATH = './db/'
 ################################################################################
 url = os.getenv('SWELL_API_URL')
 
-# Define your custom headers here
-headers = {
-    'Authorization': os.getenv('SWELL_AUTORIZATION_KEY'),  # If you have an API token or authentication
-    'Content-Type': 'application/json',  # If needed for the request body
-}
+def handle_db():
+    # Define your custom headers here
+    headers = {
+        'Authorization': os.getenv('SWELL_AUTORIZATION_KEY'),  # If you have an API token or authentication
+        'Content-Type': 'application/json',  # If needed for the request body
+    }
 
-# Make the HTTP request with custom headers
-response = requests.get(url, headers=headers)
+    # Make the HTTP request with custom headers
+    response = requests.get(url, headers=headers)
 
-# Check if the request was successful
-if response.status_code == 200:
-    # Load the JSON data from the response
-    json_data = response.json()
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Load the JSON data from the response
+        json_data = response.json()
 
-    # Initialize an empty list to store extracted data for each item
-    extracted_data_list = []
+        # Initialize an empty list to store extracted data for each item
+        extracted_data_list = []
 
-    # Loop through each item in the array and extract the desired information
-    for item in json_data["results"]:
-         if item.get("active"):
-            extracted_data = {
-                "id": item.get("id", None),
-                "name": item.get("name", None),
-                "active": item.get("active", None),
-                "description": item.get("description", None),
-                "sale": item.get("sale", None),
-                "sale_price": item.get("sale_price", None),
-                "price": item.get("price", None),
-                "currency": item.get("currency", None),
-                "slug": item.get("slug", None),
-                "stock": item.get("stock_level", None),
-                "image_url": item.get("images")[0].get("file").get("url")
-            }
-            extracted_data_list.append(extracted_data)    
-    
-    open('data.json', 'w').write(json.dumps( extracted_data_list, indent=4))
-    open('dataSwell.json', 'w').write(json.dumps( json_data, indent=4))
-    # Process the JSON data as needed
-    print(extracted_data_list)
-else:
-    print(f"Request failed with status code: {response.status_code}")
+        # Loop through each item in the array and extract the desired information
+        for item in json_data["results"]:
+            if item.get("active"):
+                extracted_data = {
+                    "id": item.get("id", None),
+                    "name": item.get("name", None),
+                    "active": item.get("active", None),
+                    "description": item.get("description", None),
+                    "sale": item.get("sale", None),
+                    "sale_price": item.get("sale_price", None),
+                    "price": item.get("price", None),
+                    "currency": item.get("currency", None),
+                    "slug": item.get("slug", None),
+                    "stock": item.get("stock_level", None),
+                    "image_url": item.get("images")[0].get("file").get("url")
+                }
+                extracted_data_list.append(extracted_data)    
+        
+        open('data.json', 'w').write(json.dumps( extracted_data_list, indent=4))
+        open('dataSwell.json', 'w').write(json.dumps( json_data, indent=4))
+        # Process the JSON data as needed
+        print(extracted_data_list)
+    else:
+        print(f"Request failed with status code: {response.status_code}")
 
 ################################################################################
 # Read documents from JSON file and add them to pinecone instance
 ################################################################################
 def revalidate():
+    handle_db()
     if os.path.exists(DATABASE_PATH):
         shutil.rmtree(DATABASE_PATH)
         

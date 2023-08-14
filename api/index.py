@@ -5,7 +5,7 @@ from openai_config import revalidate
 from openai_related import query_related
 from openai_chat import query_chat, memory
 from fastapi.middleware.cors import CORSMiddleware
-from api.pinecone_db import delete_index
+from pinecone_db import delete_index
 
 app = FastAPI()
 
@@ -31,6 +31,14 @@ app.add_middleware(
 )    
 
 # ################################################################################
+# # TEST
+# ################################################################################
+@app.get("/api")
+def handle_test():
+    return {"status": "ok",
+            "message": "API is working"}
+
+# ################################################################################
 # # Revalidate DB
 # ################################################################################
 
@@ -52,7 +60,7 @@ def handle_revalidate():
         "status": "Revalidated",
         "duration": f"{elapsed_time:.4f} seconds"
     }
-    
+      
 # ################################################################################
 # # Delete pinecone index - use just when is needed
 # ################################################################################

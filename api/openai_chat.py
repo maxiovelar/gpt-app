@@ -9,7 +9,7 @@ from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
-from api.pinecone_db import get_db_instance
+from pinecone_db import get_db_instance
 
 from langchain.memory import ConversationBufferMemory
 
