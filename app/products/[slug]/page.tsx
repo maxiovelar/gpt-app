@@ -68,7 +68,18 @@ const Product = async ({ params }: { params: { slug: string } }) => {
             <ProductCard product={related_product} key={related_product.id} />
           );
         })} */}
-        {JSON.stringify(related_products_ids)}
+        {related_products_ids ? (
+          related_products_ids.result.map((relatedProductId) => {
+            const related_product = productsData.find(
+              (obj) => obj.id === relatedProductId
+            );
+            return (
+              <ProductCard product={related_product} key={related_product.id} />
+            );
+          })
+        ) : (
+          <p>Loading related products...</p>
+        )}
       </div>
     </div>
   );
