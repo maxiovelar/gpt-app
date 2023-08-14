@@ -15,8 +15,9 @@ from langchain.chat_models import ChatOpenAI
 def query_related(query):
 
 
-    return print(query)
-    # db = get_db_instance()
+    db = get_db_instance()
+    
+    return print(db)
 
     # # prompt_template = """
     # # You will receive a object containing a product name delimited with <>. Your task is to use the following pieces of context to find a maximum of three products that are related to the product delimited with <>.
