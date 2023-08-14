@@ -3,6 +3,7 @@ import shutil
 import time
 import json
 import requests
+import tempfile
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -13,6 +14,8 @@ from langchain.prompts import PromptTemplate
 from pinecone_db import get_db_embeddings
 
 # DATABASE_PATH = './db/'
+tmp_dir = tempfile.gettempdir()
+DATABASE_PATH = tmp_dir + '/db/'
 
 ################################################################################
 # API Swell
@@ -67,9 +70,6 @@ def handle_db():
 ################################################################################
 def revalidate():
     handle_db()
-    
-    tmp_dir = tempfile.gettempdir()
-    DATABASE_PATH = tmp_dir + '/db/'
     
     if os.path.exists(DATABASE_PATH):
         shutil.rmtree(DATABASE_PATH)
